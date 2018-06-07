@@ -16,7 +16,8 @@
         android:padding="0dp"
         android:scaleType="center"
         android:src="@drawable/background"
-        tools:background="@android:color/background_light" />
+        tools:background="@android:color/background_light"
+        android:layout_alignParentLeft="true" />
 
     <AutoCompleteTextView
         android:id="@+id/from_box"
@@ -48,13 +49,81 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="164dp"
         android:text="@string/go" />
+</RelativeLayout>
 
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--xmlns:tools="http://schemas.android.com/tools"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="@drawable/background"-->
+    <!--android:id="@+id/relative"-->
+    <!--tools:context=".MainActivity">-->
 
-    <!--<Spinner-->
-        <!--android:id="@+id/stations"-->
-        <!--android:layout_width="match_parent"-->
+    <!--<ImageView-->
+        <!--android:id="@+id/background_image"-->
+        <!--android:layout_width="wrap_content"-->
         <!--android:layout_height="wrap_content"-->
         <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_below="@+id/suggestion_box"></Spinner>-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:padding="0dp"-->
+        <!--android:scaleType="center"-->
+        <!--android:src="@drawable/background"-->
+        <!--tools:background="@android:color/background_light"-->
+        <!--android:layout_alignParentLeft="true" />-->
 
-</RelativeLayout>
+    <!--<Button-->
+        <!--android:id="@+id/from_button"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="44dp"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:completionThreshold="1"-->
+        <!--android:hint="@string/from" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/to_button"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="105dp"-->
+        <!--android:background="@android:color/white"-->
+        <!--android:completionThreshold="1"-->
+        <!--android:hint="@string/to" />-->
+
+    <!--<Button-->
+        <!--android:id="@+id/go_button"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="164dp"-->
+        <!--android:text="@string/go" />-->
+
+    <!--&lt;!&ndash;Search Icon in the From Box&ndash;&gt;-->
+    <!--<SearchView-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="40dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/from_button"-->
+        <!--android:layout_alignTop="@+id/from_button"-->
+        <!--android:layout_alignRight="@+id/from_button" />-->
+
+    <!--&lt;!&ndash;Search Icon in the To Box&ndash;&gt;-->
+    <!--<SearchView-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="102dp"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/to_button"-->
+        <!--android:layout_alignTop="@+id/to_button"-->
+        <!--android:layout_alignRight="@+id/to_button" />-->
+
+<!--</RelativeLayout>-->
