@@ -3,7 +3,6 @@ package com.example.andy.accuride;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -26,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         to_box = findViewById(R.id.to_box);
         go_button = findViewById(R.id.go_button);
 
+        //Adapters used to give suggestions when user types into the boxes
         ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this,
                 android.R.layout.simple_spinner_dropdown_item, stationNames);
 
@@ -35,13 +35,19 @@ public class MainActivity extends AppCompatActivity {
         from_box.setAdapter(adapter);
         to_box.setAdapter(adapter2);
 
-        //Need to add condition that if from box and to box empty it doesn't go anywhere
-        go_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        go_button.setOnClickListener(v -> {
+            if (from_box.getText().length() == 0 || to_box.getText().length() == 0) {
+                popUp();
+            } else {
                 openActivity2();
             }
         });
+    }
+
+    //Method to open GoPopUp
+    public void popUp() {
+        Intent intent = new Intent(this, GoPopUp.class);
+        startActivity(intent);
     }
 
     //Method to open Activity2

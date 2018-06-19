@@ -17,6 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Activity2" />
+
+        <!--Theme is to make the window disappear when you click outside it-->
+        <activity android:name=".GoPopUp"
+        android:theme="@style/AppTheme.CustomTheme"/>
     </application>
 
 </manifest>
