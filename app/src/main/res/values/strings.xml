@@ -3,4 +3,6 @@
     <string name="from">From</string>
     <string name="to">To</string>
     <string name="go">Go</string>
+    <string name="background_image">background_image</string>
+    <string name="activity_2">Activity 2</string>
 </resources>
