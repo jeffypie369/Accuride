@@ -3,6 +3,7 @@ package com.example.andy.accuride;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -35,11 +36,15 @@ public class MainActivity extends AppCompatActivity {
         from_box.setAdapter(adapter);
         to_box.setAdapter(adapter2);
 
+        //Need to handle the case if both inputs are the same
         go_button.setOnClickListener(v -> {
-            if (from_box.getText().length() == 0 || to_box.getText().length() == 0) {
+            Editable from_box_str = from_box.getText();
+            Editable to_box_str = to_box.getText();
+            if (from_box_str.length() == 0 || to_box_str.length() == 0) {
+                //Either of the boxes are empty or if input is the same.
                 popUp();
             } else {
-                openActivity2();
+                openActivity2(from_box_str, to_box_str);
             }
         });
     }
@@ -51,8 +56,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     //Method to open Activity2
-    public void openActivity2() {
+    public void openActivity2(Editable from_box_str, Editable to_box_str) {
         Intent intent = new Intent(this, Activity2.class);
+        //The 2 lines below passes the inputs the user entered for "From" and "To" to the next activity
+        intent.putExtra("fromBox", from_box_str);
+        intent.putExtra("toBox", to_box_str);
         startActivity(intent);
     }
 

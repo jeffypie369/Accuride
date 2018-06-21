@@ -6,4 +6,5 @@
     <string name="background_image">background_image</string>
     <string name="activity_2">Activity 2</string>
     <string name="start_and_or_destination_is_empty">Start and/or Destination is empty!</string>
+    <string name="fastest">Fastest</string>
 </resources>
