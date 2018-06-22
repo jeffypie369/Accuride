@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
     public void openActivity2(Editable from_box_str, Editable to_box_str) {
         Intent intent = new Intent(this, Activity2.class);
         //The 2 lines below passes the inputs the user entered for "From" and "To" to the next activity
-        intent.putExtra("fromBox", from_box_str);
-        intent.putExtra("toBox", to_box_str);
+        intent.putExtra("fromBox", String.valueOf(from_box_str));
+        intent.putExtra("toBox", String.valueOf(to_box_str));
         startActivity(intent);
     }
 
