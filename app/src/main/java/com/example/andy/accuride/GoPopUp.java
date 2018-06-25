@@ -6,11 +6,16 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
 /**
- * To display the pop-up window when "Go" button is clicked but
- * from box and to box is still empty.
+ * This class  when the user clicks "Go" after entering
+ * an invalid input in both "From" and "To" boxes
+ * @author Andy Chan
  */
 public class GoPopUp extends Activity {
 
+    /**
+     * This method displays the pop-up content of the application at this page.
+     * Image taken from the go_popup xml file.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

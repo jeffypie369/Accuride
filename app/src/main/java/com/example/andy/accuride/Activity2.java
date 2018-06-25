@@ -7,11 +7,16 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 /**
- * Displayed when the user clicks "Go" after entering
- * an input for both "From" and "To"
+ * This class  when the user clicks "Go" after entering
+ * an input in both "From" and "To" boxes
+ * @author Andy Chan
  */
 public class Activity2 extends AppCompatActivity {
 
+    /**
+     * This method displays the content of the application at this page.
+     * Image taken from the activity_2 xml file.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

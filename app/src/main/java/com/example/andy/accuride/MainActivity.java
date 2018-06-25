@@ -10,12 +10,19 @@ import android.widget.Button;
 
 import java.util.ArrayList;
 
+/**
+ * This class is the main class of the whole program.
+ * @author Andy Chan
+ */
 public class MainActivity extends AppCompatActivity {
     ArrayList<String> stationNames = new ArrayList<>();
     AutoCompleteTextView from_box;
     AutoCompleteTextView to_box;
     Button go_button;
 
+    /**
+     * This method will render the landing page of the application when its open.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,13 +56,19 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    //Method to open GoPopUp
+    /**
+     * This method is used open GoPopUp.class
+     */
     public void popUp() {
         Intent intent = new Intent(this, GoPopUp.class);
         startActivity(intent);
     }
 
-    //Method to open Activity2
+    /**
+     * This method is used to open Activity2.class
+     * @param from_box_str The input that the user entered in the "From" box
+     * @param to_box_str   The input that the user entered in the "To" box
+     */
     public void openActivity2(Editable from_box_str, Editable to_box_str) {
         Intent intent = new Intent(this, Activity2.class);
         //The 2 lines below passes the inputs the user entered for "From" and "To" to the next activity
@@ -64,7 +77,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    //Method to initialise list of stations
+    /**
+     * This Method is used to initialise the list of stations for the ArrayAdapter
+     */
     private void initStations() {
         stationNames.add("Pasir Ris");
         stationNames.add("Tampines");
