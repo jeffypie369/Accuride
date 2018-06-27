@@ -6,20 +6,20 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
 /**
- * This class is used when the user clicks "Go" after entering
- * an invalid input in both "From" and "To" boxes
+ * This class is used when the user clicks on the "Card Fare" button
+ * in Activity2.
  * @author Andy Chan
  */
-public class GoPopUp extends Activity {
+public class CardfareActivity extends Activity {
 
     /**
      * This method displays the pop-up content of the application at this page.
-     * Content taken from the go_popup xml file.
+     * Content taken from the card_fare.xml file.
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.go_popup);
+        setContentView(R.layout.card_fare);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);

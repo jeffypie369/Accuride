@@ -10,7 +10,7 @@
     <TabHost
         android:id="@android:id/tabhost"
         android:layout_width="292dp"
-        android:layout_height="300dip"
+        android:layout_height="454dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp">
@@ -30,20 +30,51 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-                <LinearLayout
+                <RelativeLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical" >
 
                     <TextView
-                        android:id="@+id/textView"
-                        android:layout_width="match_parent"
+                        android:id="@+id/tab1minutes"
+                        android:layout_width="50dp"
                         android:layout_height="wrap_content"
-                        android:text="TextView" />
-                </LinearLayout>
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="43dp"
+                        android:layout_marginStart="43dp"
+                        android:layout_marginTop="32dp"
+                        android:gravity="center"
+                        android:text="Minutes" />
 
-                <LinearLayout
+                    <TextView
+                        android:id="@+id/tab1numOfStops"
+                        android:layout_width="50dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignStart="@+id/tab1minutes"
+                        android:layout_marginTop="74dp"
+                        android:gravity="center"
+                        android:text="Stops"
+                        android:layout_alignLeft="@+id/tab1minutes" />
+
+                    <Button
+                        android:id="@+id/cardfareButton"
+                        android:layout_width="45dp"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="53dp"
+                        android:layout_marginRight="53dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Card Fare"
+                        android:textSize="6sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -91,4 +122,5 @@
         android:textColor="@android:color/black"
         android:textSize="18sp"
         android:visibility="visible" />
+
 </RelativeLayout>

@@ -43,15 +43,17 @@ public class MainActivity extends AppCompatActivity {
         from_box.setAdapter(adapter);
         to_box.setAdapter(adapter2);
 
-        //Need to handle the case if both inputs are the same
         go_button.setOnClickListener(v -> {
             Editable from_box_str = from_box.getText();
             Editable to_box_str = to_box.getText();
-            if (from_box_str.length() == 0 || to_box_str.length() == 0) {
-                //Either of the boxes are empty or if input is the same.
-                popUp();
-            } else {
+            boolean fromChecker = stationChecker(from_box_str);
+            boolean toChecker = stationChecker(to_box_str);
+
+            if (fromChecker && toChecker) {
                 openActivity2(from_box_str, to_box_str);
+            } else {
+                //Input invalid
+                popUp();
             }
         });
     }
@@ -78,7 +80,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * This Method is used to initialise the list of stations for the ArrayAdapter
+     * This method checks if the user input is valid.
+     * @param input The string to check against.
+     * @return      True if the input belongs in the stationNames array.
+     */
+    public boolean stationChecker(Editable input) {
+        String userInput = input.toString();
+
+        for (String station: stationNames) {
+            if (station.equalsIgnoreCase(userInput)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    /**
+     * This method is used to initialise the list of stations for the ArrayAdapter
      */
     private void initStations() {
         stationNames.add("Pasir Ris");

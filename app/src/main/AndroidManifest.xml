@@ -20,7 +20,9 @@
 
         <!--Theme is to make the window disappear when you click outside it-->
         <activity android:name=".GoPopUp"
-        android:theme="@style/AppTheme.CustomTheme"/>
+            android:theme="@style/AppTheme.CustomTheme"/>
+        <activity android:name=".CardfareActivity"
+            android:theme="@style/AppTheme.CustomTheme"/>
     </application>
 
 </manifest>
