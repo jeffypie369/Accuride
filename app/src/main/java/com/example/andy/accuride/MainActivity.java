@@ -7,6 +7,7 @@ import android.text.Editable;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import java.util.ArrayList;
 
@@ -19,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     AutoCompleteTextView from_box;
     AutoCompleteTextView to_box;
     Button go_button;
+    ImageButton announcement_button;
 
     /**
      * This method will render the landing page of the application when its open.
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         from_box = findViewById(R.id.from_box);
         to_box = findViewById(R.id.to_box);
         go_button = findViewById(R.id.go_button);
+        announcement_button = findViewById(R.id.announcement_button);
 
         //Adapters used to give suggestions when user types into the boxes
         ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this,
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         from_box.setAdapter(adapter);
         to_box.setAdapter(adapter2);
 
+        //This part of the code will run when the "Go" button is clicked
         go_button.setOnClickListener(v -> {
             Editable from_box_str = from_box.getText();
             Editable to_box_str = to_box.getText();
@@ -56,6 +60,10 @@ public class MainActivity extends AppCompatActivity {
                 popUp();
             }
         });
+
+        announcement_button.setOnClickListener(v -> {
+            openAnnouncement();
+        });
     }
 
     /**
@@ -63,6 +71,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void popUp() {
         Intent intent = new Intent(this, GoPopUp.class);
+        startActivity(intent);
+    }
+
+    /**
+     * This method is used to open AnnouncementActivity.class
+     */
+    public void openAnnouncement() {
+        Intent intent = new Intent(this, AnnouncementActivity.class);
         startActivity(intent);
     }
 
@@ -92,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         }
+        //for loop exited. Input is not in the array.
         return false;
     }
 
