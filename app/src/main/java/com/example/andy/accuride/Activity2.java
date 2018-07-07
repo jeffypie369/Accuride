@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TabHost;
 import android.widget.TextView;
 
+import java.io.IOException;
+
 /**
  * This class is used when the user clicks "Go" after entering
  * an input in both "From" and "To" boxes
@@ -27,6 +29,27 @@ public class Activity2 extends AppCompatActivity {
 
         String start = getIntent().getStringExtra("fromBox");
         String destination = getIntent().getStringExtra("toBox");
+
+        //Bug here
+        String from = "EW " + start;
+        String to = "EW " + destination;
+
+        String test1 = "EW Buona Vista";
+        String test2 = "DT Fort Canning";
+
+        //Possible bug in this part
+        Dijkstra dijkstra = new Dijkstra();
+        try {
+            dijkstra.run(test1, test2);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        //In activity_2.xml there is a Plain Text. Tried to run Dijkstra and display the time taken but it is always -1.
+        //Might be an issue in dijkstra prog. Really uncertain.
+        TextView test = findViewById(R.id.test);
+        test.setText((Integer.toString(dijkstra.timeTaken)));
+        test.setVisibility(View.VISIBLE);
 
         TextView fromString = findViewById(R.id.start_string);
         fromString.setText(start);

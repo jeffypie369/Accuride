@@ -9,6 +9,7 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -29,7 +30,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        initStations();
+
+        try {
+            initStations();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         from_box = findViewById(R.id.from_box);
         to_box = findViewById(R.id.to_box);
@@ -115,7 +121,22 @@ public class MainActivity extends AppCompatActivity {
     /**
      * This method is used to initialise the list of stations for the ArrayAdapter
      */
-    private void initStations() {
+    private void initStations() throws IOException {
+//        Scanner sc = new Scanner(new
+//                File("C:\\Users\\Andy\\Desktop\\MyProjects\\AndroidStudioProjects\\Accuride\\app\\src\\main\\java\\com\\example\\andy\\accuride\\EdgesTimeWait.txt")
+//        );
+//
+//        while (sc.hasNextLine()) {
+//            String str = sc.nextLine();
+//            if (str.length() == 1) {
+//                continue;
+//            } else {
+//                stationNames.add(str);
+//            }
+//        }
+
+        stationNames.add("Changi Airport");
+        stationNames.add("Expo");
         stationNames.add("Pasir Ris");
         stationNames.add("Tampines");
         stationNames.add("Simei");
@@ -128,5 +149,26 @@ public class MainActivity extends AppCompatActivity {
         stationNames.add("Kallang");
         stationNames.add("Lavender");
         stationNames.add("Bugis");
+        stationNames.add("City Hall");
+        stationNames.add("Raffles Place");
+        stationNames.add("Tanjong Pagar");
+        stationNames.add("Outram Park");
+        stationNames.add("Tiong Bahru");
+        stationNames.add("Redhill");
+        stationNames.add("Queenstown");
+        stationNames.add("Commonwealth");
+        stationNames.add("Buona Vista");
+        stationNames.add("Dover");
+        stationNames.add("Clementi");
+        stationNames.add("Jurong East");
+        stationNames.add("Chinese Garden");
+        stationNames.add("Lakeside");
+        stationNames.add("Boon Lay");
+        stationNames.add("Pioneer");
+        stationNames.add("Joo Koon");
+        stationNames.add("Gul Circle");
+        stationNames.add("Tuas Cresent");
+        stationNames.add("Tuas West Road");
+        stationNames.add("Tuas Link");
     }
 }

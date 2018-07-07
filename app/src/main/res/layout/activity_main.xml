@@ -80,9 +80,10 @@
         android:layout_height="wrap_content"
         android:layout_alignEnd="@+id/from_box"
         android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/from_box"
         android:layout_marginBottom="25dp"
         android:contentDescription="@string/announcement_button"
-        app:srcCompat="@android:drawable/ic_dialog_alert"
-        android:layout_alignRight="@+id/from_box" />
+        android:tint="@android:color/background_light"
+        app:srcCompat="@android:drawable/ic_dialog_alert" />
 
 </RelativeLayout>

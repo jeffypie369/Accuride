@@ -1,0 +1,621 @@
+EW Jurong East
+NS Jurong East
+6
+NS Jurong East
+NS Bukit Batok
+3
+NS Bukit Batok
+NS Bukit Gombak
+2
+NS Bukit Gombak
+NS Choa Chu Kang
+3
+NS Choa Chu Kang
+BP Choa Chu Kang
+7
+NS Choa Chu Kang
+NS Yew Tee
+3
+NS Yew Tee
+NS Kranji
+4
+NS Kranji
+NS Marsiling
+3
+NS Marsiling
+NS Woodlands
+2
+NS Woodlands
+NS Admiralty
+3
+NS Admiralty
+NS Sembawang
+3
+NS Sembawang
+NS Yishun
+4
+NS Yishun
+NS Khatib
+2
+NS Khatib
+NS Yio Chu Kang
+5
+NS Yio Chu Kang
+NS Ang Mo Kio
+2
+NS Ang Mo Kio
+NS Bishan
+4
+NS Bishan
+CC Bishan
+9
+NS Bishan
+NS Braddell
+1
+NS Braddell
+NS Toa Payoh
+2
+NS Toa Payoh
+NS Novena
+2
+NS Novena
+NS Newton
+2
+NS Newton
+DT Newton
+7
+NS Newton
+NS Orchard
+2
+NS Orchard
+NS Somerset
+2
+NS Somerset
+NS Dhoby Ghaut
+2
+NS Dhoby Ghaut
+NE Dhoby Ghaut
+7
+NS Dhoby Ghaut
+CC Dhoby Ghaut
+7
+NE Dhoby Ghaut
+CC Dhoby Ghaut
+9
+NS Dhoby Ghaut
+NS City Hall
+2
+EW City Hall
+NS City Hall
+6
+EW Raffles Place
+NS Raffles Place
+6
+NS City Hall
+NS Raffles Place
+2
+NS Raffles Place
+NS Marina Bay
+1
+NS Marina Bay
+CC Marina Bay
+8
+NS Marina Bay
+NS Marina South Pier
+2
+EW Pasir Ris
+EW Tampines
+4
+EW Tampines
+DT Tampines
+10
+EW Tampines
+EW Simei
+2
+EW Simei
+EW Tanah Merah
+3
+EW Tanah Merah
+CG Tanah Merah
+12
+EW Tanah Merah
+EW Bedok
+3
+EW Bedok
+EW Kembangan
+3
+EW Kembangan
+EW Eunos
+2
+EW Eunos
+EW Paya Lebar
+2
+EW Paya Lebar
+CC Paya Lebar
+9
+EW Paya Lebar
+EW Aljunied
+2
+EW Aljunied
+EW Kallang
+2
+EW Kallang
+EW Lavender
+2
+EW Lavender
+EW Bugis
+2
+EW Bugis
+DT Bugis
+10
+EW Bugis
+EW City Hall
+2
+EW City Hall
+EW Raffles Place
+2
+EW Raffles Place
+EW Tanjong Pagar
+2
+EW Tanjong Pagar
+EW Outram Park
+2
+EW Outram Park
+NE Outram Park
+6
+EW Outram Park
+EW Tiong Bahru
+3
+EW Tiong Bahru
+EW Redhill
+2
+EW Redhill
+EW Queenstown
+3
+EW Queenstown
+EW Commonwealth
+2
+EW Commonwealth
+EW Buona Vista
+2
+EW Buona Vista
+CC Buona Vista
+8
+EW Buona Vista
+EW Dover
+2
+EW Dover
+EW Clementi
+3
+EW Clementi
+EW Jurong East
+4
+EW Jurong East
+EW Chinese Garden
+3
+EW Chinese Garden
+EW Lakeside
+2
+EW Lakeside
+EW Boon Lay
+2
+EW Boon Lay
+EW Pioneer
+2
+EW Pioneer
+EW Joo Koon
+4
+EW Joo Koon
+EW Gul Circle
+3
+EW Gul Circle
+EW Tuas Crescent
+3
+EW Tuas Crescent
+EW Tuas West Road
+2
+EW Tuas West Road
+EW Tuas Link
+3
+CG Tanah Merah
+CG Expo
+3
+CG Expo
+DT Expo
+4
+CG Expo
+CG Changi Airport
+5
+CC HarbourFront
+NE HarbourFront
+5
+NE HarbourFront
+NE Outram Park
+4
+NE Outram Park
+NE Chinatown
+1
+NE Chinatown
+DT Chinatown
+7
+NE Chinatown
+NE Clarke Quay
+2
+NE Clarke Quay
+NE Dhoby Ghaut
+3
+NE Dhoby Ghaut
+NE Little India
+1
+NE Little India
+DT Little India
+7
+NE Little India
+NE Farrer Park
+1
+NE Farrer Park
+NE Boon Keng
+2
+NE Boon Keng
+NE Potong Pasir
+3
+NE Potong Pasir
+NE Woodleigh
+1
+NE Woodleigh
+NE Serangoon
+2
+CC Serangoon
+NE Serangoon
+8
+NE Serangoon
+NE Kovan
+3
+NE Kovan
+NE Hougang
+2
+NE Hougang
+NE Buangkok
+2
+NE Buangkok
+NE Sengkang
+2
+NE Sengkang
+STC Sengkang
+6
+NE Sengkang
+NE Punggol
+3
+NE Punggol
+PTC Punggol
+8
+CC Dhoby Ghaut
+CC Bras Basah
+2
+CC Bras Basah
+CC Esplanade
+2
+CC Esplanade
+CC Promenade
+2
+CC Promenade
+CC Bayfront
+6
+CC Bayfront
+CC Marina Bay
+2
+CC Promenade
+DT Promenade
+5
+CC Promenade
+CC Nicoll Highway
+2
+CC Nicoll Highway
+CC Stadium
+2
+CC Stadium
+CC Mountbatten
+2
+CC Mountbatten
+CC Dakota
+2
+CC Dakota
+CC Paya Lebar
+2
+CC Paya Lebar
+CC MacPherson
+2
+CC MacPherson
+DT MacPherson
+7
+CC MacPherson
+CC Tai Seng
+2
+CC Tai Seng
+CC Bartley
+2
+CC Bartley
+CC Serangoon
+3
+CC Serangoon
+CC Lorong Chuan
+2
+CC Lorong Chuan
+CC Bishan
+2
+CC Bishan
+CC Marymount
+3
+CC Marymount
+CC Caldecott
+2
+CC Caldecott
+CC Botanic Gardens
+5
+CC Botanic Gardens
+DT Botanic Gardens
+9
+CC Botanic Gardens
+CC Farrer Road
+2
+CC Farrer Road
+CC Holland Village
+3
+CC Holland Village
+CC Buona Vista
+1
+CC Buona Vista
+CC one-north
+3
+CC one-north
+CC Kent Ridge
+2
+CC Kent Ridge
+CC Haw Par Villa
+2
+CC Haw Par Villa
+CC Pasir Panjang
+2
+CC Pasir Panjang
+CC Labrador Park
+3
+CC Labrador Park
+CC Telok Blangah
+1
+CC Telok Blangah
+CC HarbourFront
+3
+CC Bayfront
+DT Bayfront
+7
+DT Bukit Panjang
+BP Bukit Panjang
+8
+DT Bukit Panjang
+DT Cashew
+2
+DT Cashew
+DT Hillview
+2
+DT Hillview
+DT Beauty World
+3
+DT Beauty World
+DT King Albert Park
+2
+DT King Albert Park
+DT Sixth Avenue
+2
+DT Sixth Avenue
+DT Tan Kah Kee
+2
+DT Tan Kah Kee
+DT Botanic Gardens
+2
+DT Botanic Gardens
+DT Stevens
+2
+DT Stevens
+DT Newton
+2
+DT Newton
+DT Little India
+2
+DT Little India
+DT Rochor
+2
+DT Rochor
+DT Bugis
+2
+DT Bugis
+DT Promenade
+2
+DT Promenade
+DT Bayfront
+2
+DT Bayfront
+DT Downtown
+2
+DT Downtown
+DT Telok Ayer
+1
+DT Telok Ayer
+DT Chinatown
+1
+DT Chinatown
+DT Fort Canning
+3
+DT Fort Canning
+DT Bencoolen
+1
+DT Bencoolen
+DT Jalan Besar
+2
+DT Jalan Besar
+DT Bendemeer
+2
+DT Bendemeer
+DT Geylang Bahru
+2
+DT Geylang Bahru
+DT Mattar
+3
+DT Mattar
+DT MacPherson
+1
+DT MacPherson
+DT Ubi
+2
+DT Ubi
+DT Kaki Bukit
+2
+DT Kaki Bukit
+DT Bedok North
+2
+DT Bedok North
+DT Bedok Resevoir
+2
+DT Bedok Resevoir
+DT Tampines West
+3
+DT Tampines West
+DT Tampines
+2
+DT Tampines
+DT Tampines East
+2
+DT Tampines East
+DT Upper Changi
+3
+DT Upper Changi
+DT Expo
+2
+BP Choa Chu Kang
+BP South View
+9
+BP South View
+BP Keat Hong
+1
+BP Keat Hong
+BP Teck Whye
+1
+BP Teck Whye
+BP Phoenix
+1
+BP Phoenix
+BP Bukit Panjang
+1
+BP Bukit Panjang
+BP Petir
+1
+BP Bukit Panjang
+BP Senja
+1
+BP Petir
+BP Pending
+1
+BP Pending
+BP Bangkit
+1
+BP Bangkit
+BP Fajar
+1
+BP Fajar
+BP Segar
+1
+BP Segar
+BP Jelapang
+1
+BP Jelapang
+BP Senja
+1
+STC Sengkang
+STC Compassvale
+2
+STC Sengkang
+STC Ranggung
+2
+STC Compassvale
+STC Rumbia
+1
+STC Rumbia
+STC Bakau
+1
+STC Bakau
+STC Kangkar
+1
+STC Kangkar
+STC Ranggung
+1
+STC Sengkang
+STC Cheng Lim
+2
+STC Sengkang
+STC Renjong
+2
+STC Cheng Lim
+STC Farmway
+1
+STC Farmway
+STC Kupang
+1
+STC Kupang
+STC Thanggam
+1
+STC Thanggam
+STC Fernvale
+1
+STC Fernvale
+STC Layar
+1
+STC Layar
+STC Tongkang
+1
+STC Tongkang
+STC Renjong
+1
+PTC Punggol
+PTC Cove
+2
+PTC Punggol
+PTC Damai
+2
+PTC Cove
+PTC Meridian
+1
+PTC Meridian
+PTC Coral Edge
+1
+PTC Coral Edge
+PTC Riviera
+1
+PTC Riviera
+PTC Kadaloor
+1
+PTC Kadaloor
+PTC Oasis
+1
+PTC Oasis
+PTC Damai
+1
+PTC Punggol
+PTC Sam Kee
+2
+PTC Punggol
+PTC Soo Teck
+2
+PTC Sam Kee
+PTC Punggol Point
+2
+PTC Punggol Point
+PTC Samudera
+1
+PTC Samudera
+PTC Nibong
+1
+PTC Nibong
+PTC Sumang
+1
+PTC Sumang
+PTC Soo Teck
+1
