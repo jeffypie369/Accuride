@@ -26,6 +26,14 @@
             android:name=".CardfareActivity"
             android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".AnnouncementActivity" />
+        <activity android:name=".LasttrainActivity" />
+        <activity android:name=".lastEWtimingsActivity" />
+        <activity android:name=".lastNStimingsActivity" />
+        <activity android:name=".lastNEtimingsActivity" />
+        <activity android:name=".lastCCtimingsActivity" />
+        <activity android:name=".lastDTtimingsActivity" />
+        <activity android:name=".lastLRTtimingsActivity" />
+
     </application>
 
 </manifest>

@@ -1,0 +1,1135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/emptyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/tuasLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Tuas Link"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/pasirRis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Pasir Ris"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 1 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/PasirRis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Pasir Ris (EW1)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew1Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2323"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew1Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 2 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Tampines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tampines (EW2)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew2Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2326"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew2Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0037"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 3 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Simei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Simei (EW3)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew3Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2328"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew3Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0034"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 4 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TanahMerah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tanah Merah (EW4)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew4Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2331"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew4Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0031"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 5 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bedok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bedok (EW5)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew5Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2334"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew5Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0029"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 6 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Kembangan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Kembangan (EW6)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew6Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2337"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew6Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0026"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 7 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Eunos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Eunos (EW7)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew7Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2339"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew7Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0024"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 8 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/PayaLebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Paya Lebar (EW8)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew8Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2341"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew8Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0022"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 9 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Aljunied"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Aljunied (EW9)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew9Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2343"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew9Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0020"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 10 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Kallang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Kallang (EW10)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew10Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2345"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew10Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0018"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 11 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Lavender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Lavender (EW11)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew11Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2347"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew11Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0016"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 12 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bugis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bugis (EW12)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew12Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2349"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew12Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0014"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 13 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/CityHall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="City Hall (EW13)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew13Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2352"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew13Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0011"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 14 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/RafflesPlace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Raffles Place (EW14)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew14Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2358"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew14Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0011"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 15 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TanjongPagar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tanjong Pagar (EW15)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew15Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0001"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew15Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0006"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 16 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/OutramPark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Outram Park (EW16)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew16Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0004"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew16Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0004"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 17 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TiongBahru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tiong Bahru (EW17)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew17Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0006"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew17Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0001"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 18 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Redhill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Redhill (EW18)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew18Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0008"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew18Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2359"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 19 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Queenstown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Queenstown (EW19)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew19Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0011"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew19Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2357"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 20 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Commonwealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Commonwealth (EW20)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew20Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0013"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew20Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2355"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 21 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BuonaVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Buona Vista (EW21)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew21Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0015"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew21Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2353"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 22 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Dover"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Dover (EW22)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew22Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0017"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew22Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2351"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 23 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Clementi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Clementi (EW23)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew23Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0020"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew23Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2349"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 24 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/JurongEast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Jurong East (EW24)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew24Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0025"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew24Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2345"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 25 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/ChineseGarden"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Chinese Garden (EW25)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew25Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0027"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew25Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2342"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 26 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Lakeside"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Lakeside (EW26)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew26Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0029"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew26Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2340"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 27 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BoonLay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Boon Lay (EW27)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew27Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0032"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew27Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2338"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 28 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Pioneer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Pioneer (EW28)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew28Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0034"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew28Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2336"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 29 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/JooKoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Joo Koon (EW29)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew29Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0038"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew29Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2332"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 30 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/GulCircle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Gul Circle (EW30)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew30Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0041"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew30Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2327"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 31 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TuasCrescent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tuas Crescent (EW31)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew31Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0043"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew31Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2324"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 32 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TuasWestRoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tuas West Road (EW32)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew32Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0045"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew32Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2322"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 33 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TuasLink"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tuas Link(EW33)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew33Tuas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/ew33Pasir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2320"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView>

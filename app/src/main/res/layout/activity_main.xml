@@ -21,69 +21,81 @@
         android:src="@drawable/background"
         tools:background="@android:color/background_light" />
 
-    <AutoCompleteTextView
-        android:id="@+id/from_box"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="44dp"
-        android:background="@android:color/white"
-        android:completionThreshold="1"
-        android:hint="@string/from" />
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/relative_layout">
 
-    <AutoCompleteTextView
-        android:id="@+id/to_box"
-        android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="105dp"
-        android:background="@android:color/white"
-        android:completionThreshold="1"
-        android:hint="@string/to" />
+        <AutoCompleteTextView
+            android:id="@+id/from_box"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/white"
+            android:completionThreshold="1"
+            android:hint="@string/from" />
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/from_box"
+            android:layout_alignRight="@+id/from_box"
+            android:layout_centerInParent="true"
+            android:visibility="visible" />
+
+        <AutoCompleteTextView
+            android:id="@+id/to_box"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/from_box"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:background="@android:color/white"
+            android:completionThreshold="1"
+            android:hint="@string/to" />
+
+        <SearchView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/to_box"
+            android:layout_alignRight="@id/to_box"
+            android:layout_alignTop="@+id/to_box"
+            android:visibility="visible" />
+
+    </RelativeLayout>
 
     <Button
         android:id="@+id/go_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/relative_layout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="167dp"
         android:text="@string/go" />
-
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/from_box"
-        android:layout_marginEnd="35dp"
-        android:layout_marginRight="35dp"
-        android:visibility="visible" />
-
-    <SearchView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignTop="@+id/to_box"
-        android:layout_marginEnd="35dp"
-        android:visibility="visible"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="35dp" >
-
-    </SearchView>
 
     <ImageButton
         android:id="@+id/announcement_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/from_box"
+        android:layout_alignEnd="@+id/background_image"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/from_box"
-        android:layout_marginBottom="25dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignRight="@+id/background_image"
         android:contentDescription="@string/announcement_button"
-        android:tint="@android:color/background_light"
-        app:srcCompat="@android:drawable/ic_dialog_alert" />
+        app:srcCompat="@drawable/tw__composer_logo_blue" />
+
+    <ImageButton
+        android:id="@+id/lastTraintimings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/announcement_button"
+        android:layout_alignStart="@+id/announcement_button"
+        android:tint="@android:color/white"
+        app:srcCompat="@android:drawable/ic_menu_help"
+        android:layout_alignLeft="@+id/announcement_button" />
 
 </RelativeLayout>

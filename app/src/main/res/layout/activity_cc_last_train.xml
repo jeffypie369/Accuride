@@ -1,0 +1,837 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"    android:fadeScrollbars="true">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/emptyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Dhoby Ghaut"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="HarbourFront"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 1 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/DhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Dhoby Ghaut (CC1)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc1dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc1harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2248"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 2 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BrasBasah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bras Basah (CC2)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc2dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0003"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc2harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2250"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 3 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Esplanade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Esplanade (CC3)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc3dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0001"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc3harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2251"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 4 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Promenade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Promenade (CC4)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc4dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2359"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc4harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2254"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 5 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/NicollHighway"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Nicoll Highway (CC5)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc5dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2357"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc5harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2256"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 6 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Stadium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Stadium (CC6)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc6dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2354"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc6harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2258"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 7 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Mountbatten"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Mountbatten (CC7)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc7dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2353"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc7harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2300"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 8 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Dakota"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Dakota (CC8)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc8dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2351"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc8harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2301"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 9 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/PayaLebar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Paya Lebar (CC9)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc9dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2349"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc9harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2304"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 10 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/MacPherson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="MacPherson (CC10)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc10dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2346"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc10harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2306"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 11 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TaiSeng"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tai Seng (CC11)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc11dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2344"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc11harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2308"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 12 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bartley"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bartley (CC12)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc12dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2342"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc12harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2310"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 13 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Serangoon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Serangoon (CC13)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc13dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2340"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc13harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2313"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 14 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/LorongChuan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Lorong Chuan (CC14)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc14dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2338"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc14harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2315"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 15 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bishan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bishan (CC15)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc15dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2335"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc15harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2318"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 16 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Marymount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Marymount (CC16)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc16dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2332"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc16harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2320"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 17 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Caldecott"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Caldecott (CC17)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc17dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2330"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc17harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2323"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 18 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BotanicGardens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Botanic Gardens (CC19)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc19dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2325"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc19harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2327"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 19 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/FarrerRoad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Farrer Road (CC20)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc20dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2323"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc20harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2329"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 20 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/HollandVillage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Holland Village (CC21)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc21dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2321"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc21harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2331"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 21 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BuonaVista"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Buona Vista (CC22)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc22dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2319"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc22harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2334"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 22 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/onenorth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="one-north (CC23)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc23dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2317"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc23harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2335"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 23 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/KentRidge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Kent Ridge (CC24)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc24dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2315"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc24harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2337"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 24 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/HawParVilla"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Haw Par Villa (CC25)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc25dhobyGhaut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2312"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/cc25harbourFront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2340"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView>
