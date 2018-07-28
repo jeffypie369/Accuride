@@ -12,7 +12,7 @@ NS Choa Chu Kang
 3
 NS Choa Chu Kang
 BP Choa Chu Kang
-7
+6
 NS Choa Chu Kang
 NS Yew Tee
 3
@@ -48,7 +48,7 @@ NS Bishan
 4
 NS Bishan
 CC Bishan
-9
+8
 NS Bishan
 NS Braddell
 1
@@ -63,7 +63,7 @@ NS Newton
 2
 NS Newton
 DT Newton
-7
+8
 NS Newton
 NS Orchard
 2
@@ -75,13 +75,13 @@ NS Dhoby Ghaut
 2
 NS Dhoby Ghaut
 NE Dhoby Ghaut
-7
+8
 NS Dhoby Ghaut
 CC Dhoby Ghaut
 7
 NE Dhoby Ghaut
 CC Dhoby Ghaut
-9
+8
 NS Dhoby Ghaut
 NS City Hall
 2
@@ -99,7 +99,7 @@ NS Marina Bay
 1
 NS Marina Bay
 CC Marina Bay
-8
+7
 NS Marina Bay
 NS Marina South Pier
 2
@@ -118,6 +118,9 @@ EW Tanah Merah
 EW Tanah Merah
 CG Tanah Merah
 12
+CG Tanah Merah
+EW Tanah Merah
+6
 EW Tanah Merah
 EW Bedok
 3
@@ -132,7 +135,7 @@ EW Paya Lebar
 2
 EW Paya Lebar
 CC Paya Lebar
-9
+8
 EW Paya Lebar
 EW Aljunied
 2
@@ -147,7 +150,7 @@ EW Bugis
 2
 EW Bugis
 DT Bugis
-10
+9
 EW Bugis
 EW City Hall
 2
@@ -162,7 +165,7 @@ EW Outram Park
 2
 EW Outram Park
 NE Outram Park
-6
+9
 EW Outram Park
 EW Tiong Bahru
 3
@@ -180,7 +183,7 @@ EW Buona Vista
 2
 EW Buona Vista
 CC Buona Vista
-8
+7
 EW Buona Vista
 EW Dover
 2
@@ -228,7 +231,7 @@ CG Changi Airport
 5
 CC HarbourFront
 NE HarbourFront
-5
+6
 NE HarbourFront
 NE Outram Park
 4
@@ -237,7 +240,7 @@ NE Chinatown
 1
 NE Chinatown
 DT Chinatown
-7
+8
 NE Chinatown
 NE Clarke Quay
 2
@@ -249,7 +252,7 @@ NE Little India
 1
 NE Little India
 DT Little India
-7
+8
 NE Little India
 NE Farrer Park
 1
@@ -267,7 +270,7 @@ NE Serangoon
 2
 CC Serangoon
 NE Serangoon
-8
+9
 NE Serangoon
 NE Kovan
 3
@@ -281,14 +284,14 @@ NE Buangkok
 NE Sengkang
 2
 NE Sengkang
-STC Sengkang
+ST Sengkang
 6
 NE Sengkang
 NE Punggol
 3
 NE Punggol
-PTC Punggol
-8
+PT Punggol
+6
 CC Dhoby Ghaut
 CC Bras Basah
 2
@@ -306,7 +309,7 @@ CC Marina Bay
 2
 CC Promenade
 DT Promenade
-5
+6
 CC Promenade
 CC Nicoll Highway
 2
@@ -327,7 +330,7 @@ CC MacPherson
 2
 CC MacPherson
 DT MacPherson
-7
+8
 CC MacPherson
 CC Tai Seng
 2
@@ -354,7 +357,7 @@ CC Botanic Gardens
 5
 CC Botanic Gardens
 DT Botanic Gardens
-9
+8
 CC Botanic Gardens
 CC Farrer Road
 2
@@ -390,7 +393,7 @@ DT Bayfront
 7
 DT Bukit Panjang
 BP Bukit Panjang
-8
+10
 DT Bukit Panjang
 DT Cashew
 2
@@ -529,93 +532,93 @@ BP Jelapang
 BP Jelapang
 BP Senja
 1
-STC Sengkang
-STC Compassvale
+ST Sengkang
+ST Compassvale
 2
-STC Sengkang
-STC Ranggung
+ST Sengkang
+ST Ranggung
 2
-STC Compassvale
-STC Rumbia
+ST Compassvale
+ST Rumbia
 1
-STC Rumbia
-STC Bakau
+ST Rumbia
+ST Bakau
 1
-STC Bakau
-STC Kangkar
+ST Bakau
+ST Kangkar
 1
-STC Kangkar
-STC Ranggung
+ST Kangkar
+ST Ranggung
 1
-STC Sengkang
-STC Cheng Lim
+ST Sengkang
+ST Cheng Lim
 2
-STC Sengkang
-STC Renjong
+ST Sengkang
+ST Renjong
 2
-STC Cheng Lim
-STC Farmway
+ST Cheng Lim
+ST Farmway
 1
-STC Farmway
-STC Kupang
+ST Farmway
+ST Kupang
 1
-STC Kupang
-STC Thanggam
+ST Kupang
+ST Thanggam
 1
-STC Thanggam
-STC Fernvale
+ST Thanggam
+ST Fernvale
 1
-STC Fernvale
-STC Layar
+ST Fernvale
+ST Layar
 1
-STC Layar
-STC Tongkang
+ST Layar
+ST Tongkang
 1
-STC Tongkang
-STC Renjong
+ST Tongkang
+ST Renjong
 1
-PTC Punggol
-PTC Cove
+PT Punggol
+PT Cove
 2
-PTC Punggol
-PTC Damai
+PT Punggol
+PT Damai
 2
-PTC Cove
-PTC Meridian
+PT Cove
+PT Meridian
 1
-PTC Meridian
-PTC Coral Edge
+PT Meridian
+PT Coral Edge
 1
-PTC Coral Edge
-PTC Riviera
+PT Coral Edge
+PT Riviera
 1
-PTC Riviera
-PTC Kadaloor
+PT Riviera
+PT Kadaloor
 1
-PTC Kadaloor
-PTC Oasis
+PT Kadaloor
+PT Oasis
 1
-PTC Oasis
-PTC Damai
+PT Oasis
+PT Damai
 1
-PTC Punggol
-PTC Sam Kee
+PT Punggol
+PT Sam Kee
 2
-PTC Punggol
-PTC Soo Teck
+PT Punggol
+PT Soo Teck
 2
-PTC Sam Kee
-PTC Punggol Point
+PT Sam Kee
+PT Punggol Point
 2
-PTC Punggol Point
-PTC Samudera
+PT Punggol Point
+PT Samudera
 1
-PTC Samudera
-PTC Nibong
+PT Samudera
+PT Nibong
 1
-PTC Nibong
-PTC Sumang
+PT Nibong
+PT Sumang
 1
-PTC Sumang
-PTC Soo Teck
+PT Sumang
+PT Soo Teck
 1

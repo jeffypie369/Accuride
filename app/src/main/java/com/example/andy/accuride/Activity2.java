@@ -40,7 +40,7 @@ public class Activity2 extends AppCompatActivity {
         toString.setText(destination);
         toString.setVisibility(View.VISIBLE);
 
-        //This part of the program finds the tabhost id and modifies it.
+        //This part of the program finds the Tabhost Id and modifies it.
         TabHost tabHost = findViewById(android.R.id.tabhost);
         tabHost.setup();
 

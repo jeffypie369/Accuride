@@ -1,6 +1,1168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="true">
 
-</android.support.constraint.ConstraintLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header Row -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/emptyText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text=" " />
+
+            <TextView
+                android:id="@+id/bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Bukit Panjang"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Expo"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 1 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bukit Panjang (DT1)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt1bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt1Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2335"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 2 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Cashew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Cashew (DT2)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt2bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0046"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt2Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2337"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 3 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Hillview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Hillview (DT3)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt3bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0044"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt3Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2339"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 4 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BeautyWorld"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Beauty World (DT5)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt5bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0040"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt5Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2342"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 5 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/KingAlbertPark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="King Albert Park (DT6)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt6bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0038"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt6Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2344"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 6 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/SixthAvenue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Sixth Avenue (DT7)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt7bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0036"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt7Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2347"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 7 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TanKahKee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tan Kah Kee (DT8)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt8bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0034"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt8Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2349"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 8 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BotanicGardens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Botanic Gardens (DT9)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt9bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0031"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt9Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2351"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 9 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Stevens"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Stevens (DT10)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt10bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0029"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt10Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2353"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 10 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Newton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Newton (DT11)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt11bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0027"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt11Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2356"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 11 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/LittleIndia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Little India (DT12)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt12bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0024"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt12Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2359"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 12 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Rochor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Rochor (DT13)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt13bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0022"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt13Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 13 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bugis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bugis (DT14)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt14bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0020"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt14Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0003"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 14 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Promenade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Promenade (DT15)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt15bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0018"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt15Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0005"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 15 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bayfront"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bayfront (DT16)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt16bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0015"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt16Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0007"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 16 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Downtown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Downtown (DT17)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt17bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0013"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt17Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0009"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 17 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TelokAyer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Telok Ayer (DT18)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt18bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0011"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt18Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0011"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 18 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Chinatown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Chinatown (DT19)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt19bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0014"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt19Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0009"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 19 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/FortCanning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Fort Canning (DT20)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt20bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0011"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt20Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0011"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 20 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bencoolen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bencoolen (DT21)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt21bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0010"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt21Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0012"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 21 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/JalanBesar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Jalan Besar (DT22)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt22bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0008"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt22Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0014"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 22 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Bendemeer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bendemeer (DT23)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt23bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0006"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt23Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0016"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 23 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/GeylangBahru"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Geylang Bahru (DT24)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt24bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0004"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt24Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0018"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 24 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Mattar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Mattar (DT25)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt25bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0002"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt25Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0021"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 25 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/MacPherson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="MacPherson (DT26)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt26bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0000"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt26Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0023"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 26 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Ubi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Ubi (DT27)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt27bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2358"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt27Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0024"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 27 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/KakiBukit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Kaki Bukit (DT28)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt28bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2356"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt28Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0026"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 28 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BedokNorth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bedok North (DT29)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt29bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2354"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt29Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0028"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 29 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/BedokReservoir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Bedok Reservoir (DT30)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt30bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2351"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt30Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0030"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 30 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TampinesWest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tampines West (DT31)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt31bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2349"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt31Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0033"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 31 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Tampines"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tampines (DT32)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt32bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2347"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt32Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0035"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 32 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/TampinesEast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Tampines East (DT33)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt33bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2345"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt33Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0037"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 33 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/UpperChangi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Upper Changi (DT34)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt34bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2341"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt34Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="0040"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+        <!-- Row 34 -->
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4">
+
+            <TextView
+                android:id="@+id/Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="Expo (DT35)"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt35bukitPanjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="2340"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/dt35Expo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@android:color/black" />
+        </TableRow>
+
+    </TableLayout>
+
+</ScrollView>
