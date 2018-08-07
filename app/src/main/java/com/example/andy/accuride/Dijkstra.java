@@ -1,11 +1,37 @@
 package com.example.andy.accuride;
 
-import java.util.*;
-import java.io.*;
+import android.content.Context;
+import android.content.ContextWrapper;
 
-public class Dijkstra {
-    private void run() throws IOException {
-        Scanner sc = new Scanner(new File("EdgesTimeWait.txt")); // reads text file
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeMap;
+
+public class Dijkstra extends ContextWrapper {
+
+    int fastestTime;
+    int leastTransfers;
+    int numOfTransfersFastest;
+    int numOfTransfersLeast;
+    ArrayList<String> fastestPath;
+    ArrayList<String> leastTransferspath;
+
+    public Dijkstra(Context context) {
+        super(context);
+        this.fastestTime = -1;
+        this.leastTransfers = -1;
+        this.numOfTransfersFastest = -1;
+        this.numOfTransfersLeast = -1;
+        this.fastestPath = new ArrayList<>();
+        this.leastTransferspath = new ArrayList<>();
+    }
+
+    public void run(String inputFrom, String inputTo) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(getAssets().open("EdgesTimeWait.txt")));
         int count = 0; // count gives a unique value to each station
         ArrayList<ArrayList<Edge>> adjList = new ArrayList<>();
         // first hashmap for station name as key and count as value
@@ -26,32 +52,34 @@ public class Dijkstra {
         for (int i = 0; i < 183; i++) {
             adjList.add(new ArrayList<>()); // create adjList, 183 stations
         }
-        String inputFrom = sc.nextLine();
-        String inputTo = sc.nextLine();
 
-        while (sc.hasNextLine()) {
+//        String inputFrom = br.readLine();
+//        String inputTo = br.readLine();
+
+        String stationFrom;
+
+        while ((stationFrom = br.readLine()) != null) {
             // add all stations into hashmaps. if station is not in yet, add it
-            String stationFrom = sc.nextLine();
             if (!hmap.containsKey(stationFrom)) {
                 hmap.put(stationFrom, count);
                 hmap2.put(count, stationFrom);
                 count++;
             }
-            String stationTo = sc.nextLine();
+            String stationTo = br.readLine();
             if (!hmap.containsKey(stationTo)) {
                 hmap.put(stationTo, count);
                 hmap2.put(count, stationTo);
                 count++;
             }
-            int time = sc.nextInt();
-            sc.nextLine();
+            int time = Integer.parseInt(br.readLine());
+            //br.readLine();
             int fromKey = hmap.get(stationFrom);
             int toKey = hmap.get(stationTo);
             // add edges to adjList
             adjList.get(fromKey).add(new Edge(fromKey, toKey, time));
             adjList.get(toKey).add(new Edge(toKey, fromKey, time));
         }
-        sc.close();
+        br.close();
 
         // Calculate fastest route
         int numStations = hmap.size();
@@ -66,22 +94,27 @@ public class Dijkstra {
         String initStation = hmap2.get(confirmed.start);
         possibleParents[5*confirmed.iValue + confirmed.jValue][inputFromKey] = -1; // no parent
         int initWaitTime = getInitWaitTime(initStation.substring(0, 3));
-        System.out.println("Time taken: " + (shortestTime + initWaitTime) + " minutes");
+        //System.out.println("Time taken: " + (shortestTime + initWaitTime) + " minutes");
         ArrayList<String> pathForAndy = new ArrayList<>();
         recordPath(inputToKey, possibleParents[5*confirmed.iValue + confirmed.jValue], hmap2, pathForAndy);
-        System.out.println(pathForAndy); // ARRAYLIST OF STRING FOR FASTEST TRANSFERS
+        //System.out.println(pathForAndy); // ARRAYLIST OF STRING FOR FASTEST TRANSFERS
+
+        this.fastestTime = shortestTime + initWaitTime;
+        this.fastestPath = pathForAndy;
 
         // Calculate least transfers
         int numTransfers = numTransfers(pathForAndy, 0);
-        System.out.println("Number of transfers: " + numTransfers);
+
+        this.numOfTransfersFastest = numTransfers;
+        //System.out.println("Number of transfers: " + numTransfers);
         leastTransfersHelper(adjList, hmap2, possibleStarts, possibleEnds);
         // ARRAYLIST OF STRING FOR LEAST TRANSFERS IS INSIDE METHOD FOR LeastTransfersHelper
     }
 
-    public static void main(String args[]) throws IOException {
-        Dijkstra dijkstra = new Dijkstra();
-        dijkstra.run();
-    }
+//    public static void main(String args[]) throws IOException {
+//        Dijkstra dijkstra = new Dijkstra();
+//        dijkstra.run();
+//    }
 
 
     private static Map.Entry<Integer, StartEnd> dfs_helper(int numStations, int[] parents, ArrayList<ArrayList<Edge>> adjList, ArrayList<Integer> possibleStarts, ArrayList<Integer> possibleEnds, int[][] possibleParents) {
@@ -136,7 +169,7 @@ public class Dijkstra {
         path.add(hmap2.get(to));
     }
 
-    public static void leastTransfersHelper(ArrayList<ArrayList<Edge>> adjList, HashMap<Integer, String> hmap2, ArrayList<Integer> possibleStarts, ArrayList<Integer> possibleEnds) {
+    public void leastTransfersHelper(ArrayList<ArrayList<Edge>> adjList, HashMap<Integer, String> hmap2, ArrayList<Integer> possibleStarts, ArrayList<Integer> possibleEnds) {
         boolean[] visited = new boolean[183];
         ArrayList<Integer> path = new ArrayList<>();
         HashMap<Integer, ArrayList<ArrayList<Integer>>> allPaths = new HashMap<>(); // arraylist of paths
@@ -163,14 +196,18 @@ public class Dijkstra {
                 System.out.println("Least Transfers: " + least);
                 Map.Entry<Integer, Integer> lowest = durations.pollFirstEntry();
                 int index = lowest.getValue();
-                System.out.println("Time taken: " + (lowest.getKey() + getInitWaitTime(hmap2.get(copiedPaths.get(index).get(0)).substring(0, 3))));
+                //System.out.println("Time taken: " + (lowest.getKey() + getInitWaitTime(hmap2.get(copiedPaths.get(index).get(0)).substring(0, 3))));
                 ArrayList<String> pathForAndy = new ArrayList<>();
                 for (int l = 0; l < copiedPaths.get(index).size(); l++) {
                     int stationInt = copiedPaths.get(index).get(l);
                     String stationString = hmap2.get(stationInt);
                     pathForAndy.add(stationString);
                 }
-                System.out.println(pathForAndy); // ARRAYLIST OF STRING FOR LEAST TRANSFERS
+                //System.out.println(pathForAndy); // ARRAYLIST OF STRING FOR LEAST TRANSFERS
+                this.leastTransfers = lowest.getKey() + getInitWaitTime(hmap2.get(copiedPaths.get(index).get(0)).substring(0, 3));
+                this.leastTransferspath = pathForAndy;
+                this.numOfTransfersLeast = least;
+
                 return;
             }
         }
@@ -331,3 +368,78 @@ public class Dijkstra {
 //	}
 
 }
+
+
+//        private void run() throws IOException {
+//        Scanner sc = new Scanner(new File("EdgesTimeWait.txt")); // reads text file
+//        int count = 0; // count gives a unique value to each station
+//        ArrayList<ArrayList<Edge>> adjList = new ArrayList<>();
+//        // first hashmap for station name as key and count as value
+//        HashMap<String, Integer> hmap = new HashMap<>();
+//        // second hashmap for count as key and station name as value
+//        HashMap<Integer, String> hmap2 = new HashMap<>();
+//        int[] parents = new int[183]; // parents array to track parent node (for path)
+//        String[] lines = new String[9];
+//        lines[0] = "EW ";
+//        lines[1] = "NS ";
+//        lines[2] = "NE ";
+//        lines[3] = "CC ";
+//        lines[4] = "DT ";
+//        lines[5] = "BP ";
+//        lines[6] = "ST ";
+//        lines[7] = "PT ";
+//        lines[8] = "CG ";
+//        for (int i = 0; i < 183; i++) {
+//            adjList.add(new ArrayList<>()); // create adjList, 183 stations
+//        }
+//        String inputFrom = sc.nextLine();
+//        String inputTo = sc.nextLine();
+//
+//        while (sc.hasNextLine()) {
+//            // add all stations into hashmaps. if station is not in yet, add it
+//            String stationFrom = sc.nextLine();
+//            if (!hmap.containsKey(stationFrom)) {
+//                hmap.put(stationFrom, count);
+//                hmap2.put(count, stationFrom);
+//                count++;
+//            }
+//            String stationTo = sc.nextLine();
+//            if (!hmap.containsKey(stationTo)) {
+//                hmap.put(stationTo, count);
+//                hmap2.put(count, stationTo);
+//                count++;
+//            }
+//            int time = sc.nextInt();
+//            sc.nextLine();
+//            int fromKey = hmap.get(stationFrom);
+//            int toKey = hmap.get(stationTo);
+//            // add edges to adjList
+//            adjList.get(fromKey).add(new Edge(fromKey, toKey, time));
+//            adjList.get(toKey).add(new Edge(toKey, fromKey, time));
+//        }
+//        sc.close();
+//
+//        // Calculate fastest route
+//        int numStations = hmap.size();
+//        ArrayList<Integer> possibleStarts = possibleLines(inputFrom, lines, hmap, hmap2);
+//        ArrayList<Integer> possibleEnds = possibleLines(inputTo, lines, hmap, hmap2);
+//        int[][] possibleParents = new int[30][183];
+//        Map.Entry<Integer, StartEnd> allTimeTaken = dfs_helper(numStations, parents, adjList, possibleStarts, possibleEnds, possibleParents);
+//        int shortestTime = allTimeTaken.getKey();
+//        StartEnd confirmed = allTimeTaken.getValue();
+//        int inputFromKey = confirmed.start;
+//        int inputToKey = confirmed.end;
+//        String initStation = hmap2.get(confirmed.start);
+//        possibleParents[5*confirmed.iValue + confirmed.jValue][inputFromKey] = -1; // no parent
+//        int initWaitTime = getInitWaitTime(initStation.substring(0, 3));
+//        System.out.println("Time taken: " + (shortestTime + initWaitTime) + " minutes");
+//        ArrayList<String> pathForAndy = new ArrayList<>();
+//        recordPath(inputToKey, possibleParents[5*confirmed.iValue + confirmed.jValue], hmap2, pathForAndy);
+//        System.out.println(pathForAndy); // ARRAYLIST OF STRING FOR FASTEST TRANSFERS
+//
+//        // Calculate least transfers
+//        int numTransfers = numTransfers(pathForAndy, 0);
+//        System.out.println("Number of transfers: " + numTransfers);
+//        leastTransfersHelper(adjList, hmap2, possibleStarts, possibleEnds);
+//        // ARRAYLIST OF STRING FOR LEAST TRANSFERS IS INSIDE METHOD FOR LeastTransfersHelper
+//    }

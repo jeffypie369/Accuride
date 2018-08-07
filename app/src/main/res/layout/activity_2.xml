@@ -8,6 +8,7 @@
     android:id="@+id/relative_layout"
     tools:context=".Activity2">
 
+    <!-- Start and Destination string at the top is here -->
     <RelativeLayout
         android:id="@+id/relativelayout2"
         android:layout_width="match_parent"
@@ -17,6 +18,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="19dp">
 
+        <!-- Start and Destination String at the top -->
         <TextView
             android:id="@+id/dash"
             android:layout_width="25dp"
@@ -82,12 +84,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+                <!-- Tab 1 -->
                 <RelativeLayout
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <!-- Minutes, Stops, Transfers and Cardfare Button -->
                     <TextView
                         android:id="@+id/tab1minutes"
                         android:layout_width="wrap_content"
@@ -112,26 +116,39 @@
                         android:text="@string/stops"
                         android:textSize="16sp" />
 
+                    <TextView
+                        android:id="@+id/tab1numOfTransfers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tab1minutes"
+                        android:layout_below="@+id/tab1numOfStops"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="Transfers"
+                        android:textSize="16sp" />
+
                     <Button
                         android:id="@+id/cardfareButton"
                         android:layout_width="78dp"
                         android:layout_height="35dp"
                         android:layout_alignLeft="@+id/tab1minutes"
-                        android:layout_below="@+id/tab1numOfStops"
+                        android:layout_below="@+id/tab1numOfTransfers"
                         android:text="@string/card_fare"
                         android:textSize="8sp" />
 
+                    <!-- Display of path -->
                     <ImageView
                         android:id="@+id/startCircle"
                         android:layout_width="108dp"
                         android:layout_height="50dp"
                         android:layout_above="@+id/tab1numOfStops"
                         android:layout_alignBaseline="@+id/tab1minutes"
+                        android:layout_alignParentLeft="true"
                         android:layout_alignParentStart="true"
                         android:layout_marginEnd="120dp"
-                        app:srcCompat="@mipmap/circle"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginRight="120dp" />
+                        android:layout_marginRight="120dp"
+                        app:srcCompat="@mipmap/circle" />
 
                     <TextView
                         android:id="@+id/journeyDash"
@@ -179,7 +196,7 @@
                         android:id="@+id/endStop"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/cardfareButton"
+                        android:layout_below="@+id/tab1numOfTransfers"
                         android:layout_marginStart="-120dp"
                         android:layout_toEndOf="@+id/startCircle"
                         android:text="TextView"
@@ -188,20 +205,22 @@
 
                 </RelativeLayout>
 
+                <!-- Tab 2 -->
                 <RelativeLayout
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <!-- Minutes, Stops, Transfers and Cardfare Button -->
                     <TextView
                         android:id="@+id/tab2minutes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:gravity="center"
-                        android:paddingRight="35dp"
-                        android:paddingTop="25dp"
+                        android:paddingRight="40dp"
+                        android:paddingTop="20dp"
                         android:text="@string/minutes"
                         android:textSize="16sp"
                         tools:ignore="NotSibling" />
@@ -218,14 +237,92 @@
                         android:text="@string/stops"
                         android:textSize="16sp" />
 
+                    <TextView
+                        android:id="@+id/tab2numOfTransfers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/tab2minutes"
+                        android:layout_below="@+id/tab2numOfStops"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingTop="10dp"
+                        android:text="Transfers"
+                        android:textSize="16sp" />
+
                     <Button
                         android:id="@+id/cardfareButton2"
                         android:layout_width="78dp"
                         android:layout_height="35dp"
                         android:layout_alignLeft="@+id/tab2minutes"
-                        android:layout_below="@+id/tab2numOfStops"
+                        android:layout_below="@+id/tab2numOfTransfers"
                         android:text="@string/card_fare"
                         android:textSize="8sp" />
+
+                    <!-- Display of path -->
+                    <ImageView
+                        android:id="@+id/startCircle2"
+                        android:layout_width="108dp"
+                        android:layout_height="50dp"
+                        android:layout_above="@+id/tab2numOfStops"
+                        android:layout_alignBaseline="@+id/tab2minutes"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginEnd="120dp"
+                        app:srcCompat="@mipmap/circle"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginRight="120dp" />
+
+                    <TextView
+                        android:id="@+id/journeyDash2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/startCircle2"
+                        android:paddingLeft="51dp"
+                        android:paddingRight="51dp"
+                        android:text="|"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:visibility="visible" />
+
+                    <ImageView
+                        android:id="@+id/endCircle2"
+                        android:layout_width="108dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/journeyDash2"
+                        app:srcCompat="@mipmap/circle" />
+
+                    <TextView
+                        android:id="@+id/startStop2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/tab2numOfStops"
+                        android:layout_marginLeft="-120dp"
+                        android:layout_marginStart="-120dp"
+                        android:layout_toEndOf="@+id/startCircle2"
+                        android:layout_toRightOf="@+id/startCircle2"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/trainDirection2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/endStop2"
+                        android:layout_below="@+id/startStop2"
+                        android:gravity="center"
+                        android:layout_toEndOf="@id/journeyDash2"
+                        android:text="TextView"
+                        android:textSize="12sp"
+                        android:layout_toRightOf="@id/journeyDash2" />
+
+                    <TextView
+                        android:id="@+id/endStop2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tab2numOfTransfers"
+                        android:layout_marginStart="-120dp"
+                        android:layout_toEndOf="@+id/startCircle2"
+                        android:text="TextView"
+                        android:layout_marginLeft="-120dp"
+                        android:layout_toRightOf="@+id/startCircle2" />
 
                 </RelativeLayout>
 
