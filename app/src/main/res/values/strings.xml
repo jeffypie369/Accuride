@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Accuride</string>
+    <string name="app_name">ACCURIDE SG</string>
     <string name="from">From</string>
     <string name="to">To</string>
     <string name="go">Go</string>
@@ -21,6 +21,8 @@
     <string name="start_string">TextView</string>
     <string name="destination_string">TextView</string>
     <string name="stops">Stops</string>
+    <string name="hint1">Where are you?</string>
+    <string name="hint2">Where are you going?</string>
     <string name="card_fare">Card Fare</string>
     <string name="minutes">Minutes</string>
 </resources>
