@@ -49,28 +49,10 @@
             android:layout_height="50dp"
             android:src="@android:color/white"
             android:background="@drawable/rounded_corners_input"
-            android:shadowDx="4dp"
-            android:shadowDy="4dp"
             android:gravity="center"
             android:hint="@string/hint1"
             android:textSize="15sp"
             android:textStyle="italic" />
-        <!--android:background="@drawable/rounded_corners_input"-->
-        <!--android:completionThreshold="1"-->
-        <!--android:ellipsize="start"-->
-        <!--android:gravity="center"-->
-        <!--android:hint="@string/hint1"-->
-        <!--android:textSize="15sp"-->
-        <!--android:textStyle="italic" -->
-
-
-        <!--<SearchView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignEnd="@+id/from_box"-->
-        <!--android:layout_alignRight="@+id/from_box"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:visibility="visible" />-->
 
         <AutoCompleteTextView
             android:id="@+id/to_box"
@@ -92,14 +74,6 @@
             android:background="#5F6261"
             android:text="@string/go"
             android:textSize="19sp" />
-
-        <!--<SearchView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignEnd="@id/to_box"-->
-        <!--android:layout_alignRight="@id/to_box"-->
-        <!--android:layout_alignTop="@+id/to_box"-->
-        <!--android:visibility="visible" />-->
 
     </LinearLayout>
 
