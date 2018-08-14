@@ -1,101 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="#CECECE"
+    android:baselineAligned="false"
+    android:orientation="vertical"
+    android:weightSum="100"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/background_image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:contentDescription="@string/background_image"
-        android:padding="0dp"
-        android:scaleType="center"
-        android:src="@drawable/background"
-        tools:background="@android:color/background_light" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8" />
 
-    <RelativeLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <ImageView
+        android:id="@+id/jeff2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="35"
+        android:baselineAligned="false"
+        android:src="@drawable/jeff2" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="bold|italic" />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relative_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/linear_layout">
+        android:layout_height="0dp"
+        android:layout_weight="47"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <AutoCompleteTextView
             android:id="@+id/from_box"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:background="@android:color/white"
-            android:completionThreshold="1"
-            android:hint="@string/from" />
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:src="@android:color/white"
+            android:background="@drawable/rounded_corners_input"
+            android:shadowDx="4dp"
+            android:shadowDy="4dp"
+            android:gravity="center"
+            android:hint="@string/hint1"
+            android:textSize="15sp"
+            android:textStyle="italic" />
+        <!--android:background="@drawable/rounded_corners_input"-->
+        <!--android:completionThreshold="1"-->
+        <!--android:ellipsize="start"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="@string/hint1"-->
+        <!--android:textSize="15sp"-->
+        <!--android:textStyle="italic" -->
 
-        <SearchView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/from_box"
-            android:layout_alignRight="@+id/from_box"
-            android:layout_centerInParent="true"
-            android:visibility="visible" />
+
+        <!--<SearchView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@+id/from_box"-->
+        <!--android:layout_alignRight="@+id/from_box"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:visibility="visible" />-->
 
         <AutoCompleteTextView
             android:id="@+id/to_box"
-            android:layout_width="300dp"
-            android:layout_height="40dp"
-            android:layout_below="@+id/from_box"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="100dp"
-            android:background="@android:color/white"
-            android:completionThreshold="1"
-            android:hint="@string/to" />
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:src="@android:color/white"
+            android:background="@drawable/rounded_corners_input"
+            android:gravity="center"
+            android:hint="@string/hint2"
+            android:textSize="15sp"
+            android:textStyle="italic" />
 
-        <SearchView
+        <Button
+            android:id="@+id/go_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@id/to_box"
-            android:layout_alignRight="@id/to_box"
-            android:layout_alignTop="@+id/to_box"
-            android:visibility="visible" />
+            android:layout_marginTop="10dp"
+            android:background="#5F6261"
+            android:text="@string/go"
+            android:textSize="19sp" />
 
-    </RelativeLayout>
+        <!--<SearchView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignEnd="@id/to_box"-->
+        <!--android:layout_alignRight="@id/to_box"-->
+        <!--android:layout_alignTop="@+id/to_box"-->
+        <!--android:visibility="visible" />-->
 
-    <Button
-        android:id="@+id/go_button"
-        android:layout_width="wrap_content"
+    </LinearLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/relative_layout2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/linear_layout"
-        android:layout_centerHorizontal="true"
-        android:text="@string/go" />
+        android:layout_weight="10"
+        android:gravity="right">
 
-    <ImageButton
-        android:id="@+id/announcement_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/background_image"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignRight="@+id/background_image"
-        android:contentDescription="@string/announcement_button"
-        app:srcCompat="@drawable/tw__composer_logo_blue" />
+        <ImageButton
+            android:id="@+id/lastTraintimings"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginBottom="0dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/hand_button" />
+        <!--app:srcCompat="@android:drawable/ic_menu_help" />-->
 
-    <ImageButton
-        android:id="@+id/lastTraintimings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/announcement_button"
-        android:layout_alignStart="@+id/announcement_button"
-        android:tint="@android:color/white"
-        app:srcCompat="@android:drawable/ic_menu_help"
-        android:layout_alignLeft="@+id/announcement_button" />
+        <ImageButton
+            android:id="@+id/announcement_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:contentDescription="@string/announcement_button"
+            android:scaleType="fitCenter"
+            android:src="@drawable/twitter_logo"
+            tools:ignore="UnknownId" />
 
-</RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>
