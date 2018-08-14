@@ -22,9 +22,6 @@
         <activity
             android:name=".GoPopUp"
             android:theme="@style/AppTheme.CustomTheme" />
-        <activity
-            android:name=".CardfareActivity"
-            android:theme="@style/AppTheme.CustomTheme" />
         <activity android:name=".AnnouncementActivity" />
         <activity android:name=".LasttrainActivity" />
         <activity android:name=".lastEWtimingsActivity" />

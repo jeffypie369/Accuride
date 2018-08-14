@@ -53,9 +53,6 @@ public class Dijkstra extends ContextWrapper {
             adjList.add(new ArrayList<>()); // create adjList, 183 stations
         }
 
-//        String inputFrom = br.readLine();
-//        String inputTo = br.readLine();
-
         String stationFrom;
 
         while ((stationFrom = br.readLine()) != null) {
@@ -110,12 +107,6 @@ public class Dijkstra extends ContextWrapper {
         leastTransfersHelper(adjList, hmap2, possibleStarts, possibleEnds);
         // ARRAYLIST OF STRING FOR LEAST TRANSFERS IS INSIDE METHOD FOR LeastTransfersHelper
     }
-
-//    public static void main(String args[]) throws IOException {
-//        Dijkstra dijkstra = new Dijkstra();
-//        dijkstra.run();
-//    }
-
 
     private static Map.Entry<Integer, StartEnd> dfs_helper(int numStations, int[] parents, ArrayList<ArrayList<Edge>> adjList, ArrayList<Integer> possibleStarts, ArrayList<Integer> possibleEnds, int[][] possibleParents) {
         TreeMap<Integer, StartEnd> fastest = new TreeMap<>();
@@ -351,95 +342,4 @@ public class Dijkstra extends ContextWrapper {
         }
         return possible;
     }
-
-//	private static void printPath(int to, int[] parents, HashMap<Integer, String> hmap2, int counter, ArrayList<String> path) {
-//		if (to == -1) {
-//			return;
-//		}
-//		counter++;
-//		printPath(parents[to], parents, hmap2, counter, path);
-//		if (counter == 1) { // to get rid of "->" for the last station
-//			System.out.print(hmap2.get(to));
-//			path.add(hmap2.get(to));
-//		} else {
-//			System.out.print(hmap2.get(to) + "->");
-//			path.add(hmap2.get(to));
-//		}
-//	}
-
 }
-
-
-//        private void run() throws IOException {
-//        Scanner sc = new Scanner(new File("EdgesTimeWait.txt")); // reads text file
-//        int count = 0; // count gives a unique value to each station
-//        ArrayList<ArrayList<Edge>> adjList = new ArrayList<>();
-//        // first hashmap for station name as key and count as value
-//        HashMap<String, Integer> hmap = new HashMap<>();
-//        // second hashmap for count as key and station name as value
-//        HashMap<Integer, String> hmap2 = new HashMap<>();
-//        int[] parents = new int[183]; // parents array to track parent node (for path)
-//        String[] lines = new String[9];
-//        lines[0] = "EW ";
-//        lines[1] = "NS ";
-//        lines[2] = "NE ";
-//        lines[3] = "CC ";
-//        lines[4] = "DT ";
-//        lines[5] = "BP ";
-//        lines[6] = "ST ";
-//        lines[7] = "PT ";
-//        lines[8] = "CG ";
-//        for (int i = 0; i < 183; i++) {
-//            adjList.add(new ArrayList<>()); // create adjList, 183 stations
-//        }
-//        String inputFrom = sc.nextLine();
-//        String inputTo = sc.nextLine();
-//
-//        while (sc.hasNextLine()) {
-//            // add all stations into hashmaps. if station is not in yet, add it
-//            String stationFrom = sc.nextLine();
-//            if (!hmap.containsKey(stationFrom)) {
-//                hmap.put(stationFrom, count);
-//                hmap2.put(count, stationFrom);
-//                count++;
-//            }
-//            String stationTo = sc.nextLine();
-//            if (!hmap.containsKey(stationTo)) {
-//                hmap.put(stationTo, count);
-//                hmap2.put(count, stationTo);
-//                count++;
-//            }
-//            int time = sc.nextInt();
-//            sc.nextLine();
-//            int fromKey = hmap.get(stationFrom);
-//            int toKey = hmap.get(stationTo);
-//            // add edges to adjList
-//            adjList.get(fromKey).add(new Edge(fromKey, toKey, time));
-//            adjList.get(toKey).add(new Edge(toKey, fromKey, time));
-//        }
-//        sc.close();
-//
-//        // Calculate fastest route
-//        int numStations = hmap.size();
-//        ArrayList<Integer> possibleStarts = possibleLines(inputFrom, lines, hmap, hmap2);
-//        ArrayList<Integer> possibleEnds = possibleLines(inputTo, lines, hmap, hmap2);
-//        int[][] possibleParents = new int[30][183];
-//        Map.Entry<Integer, StartEnd> allTimeTaken = dfs_helper(numStations, parents, adjList, possibleStarts, possibleEnds, possibleParents);
-//        int shortestTime = allTimeTaken.getKey();
-//        StartEnd confirmed = allTimeTaken.getValue();
-//        int inputFromKey = confirmed.start;
-//        int inputToKey = confirmed.end;
-//        String initStation = hmap2.get(confirmed.start);
-//        possibleParents[5*confirmed.iValue + confirmed.jValue][inputFromKey] = -1; // no parent
-//        int initWaitTime = getInitWaitTime(initStation.substring(0, 3));
-//        System.out.println("Time taken: " + (shortestTime + initWaitTime) + " minutes");
-//        ArrayList<String> pathForAndy = new ArrayList<>();
-//        recordPath(inputToKey, possibleParents[5*confirmed.iValue + confirmed.jValue], hmap2, pathForAndy);
-//        System.out.println(pathForAndy); // ARRAYLIST OF STRING FOR FASTEST TRANSFERS
-//
-//        // Calculate least transfers
-//        int numTransfers = numTransfers(pathForAndy, 0);
-//        System.out.println("Number of transfers: " + numTransfers);
-//        leastTransfersHelper(adjList, hmap2, possibleStarts, possibleEnds);
-//        // ARRAYLIST OF STRING FOR LEAST TRANSFERS IS INSIDE METHOD FOR LeastTransfersHelper
-//    }

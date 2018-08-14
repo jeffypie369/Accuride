@@ -1,11 +1,9 @@
 package com.example.andy.accuride;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.Button;
-import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TabHost;
 import android.widget.TextView;
 
@@ -18,7 +16,6 @@ import java.util.ArrayList;
  * @author Andy Chan
  */
 public class Activity2 extends AppCompatActivity {
-    Button cardfare_button;
 
     /**
      * This method displays the content of the application at this page.
@@ -45,12 +42,13 @@ public class Activity2 extends AppCompatActivity {
         /*
             This part modifies Minutes, Transfers and Stops
          */
-        TextView tab1Minutes = findViewById(R.id.tab1minutes);
-        TextView tab1numOfTransfers = findViewById(R.id.tab1numOfTransfers);
-        TextView tab1numOfStops = findViewById(R.id.tab1numOfStops);
-        TextView tab2Minutes = findViewById(R.id.tab2minutes);
-        TextView tab2numOfTransfers = findViewById(R.id.tab2numOfTransfers);
-        TextView tab2numOfStops = findViewById(R.id.tab2numOfStops);
+        TextView tab1Minutes = findViewById(R.id.tab1timeTaken);
+        TextView tab1numOfTransfers = findViewById(R.id.tab1Transfers);
+        TextView tab1numOfStops = findViewById(R.id.tab1Stops);
+
+        TextView tab2Minutes = findViewById(R.id.tab2timeTaken);
+        TextView tab2numOfTransfers = findViewById(R.id.tab2Transfers);
+        TextView tab2numOfStops = findViewById(R.id.tab2Stops);
 
         //Minutes
         String fastestTime = dijkstra.fastestTime + " Minutes";
@@ -59,18 +57,14 @@ public class Activity2 extends AppCompatActivity {
         tab2Minutes.setText(leastTransfersTime);
 
         //Transfers
-        String numOfTransfersFastest = dijkstra.numOfTransfersFastest + " Transfers";
-        String numOfTransfersLeast = dijkstra.numOfTransfersLeast + " Transfers";
-        tab1numOfTransfers.setText(numOfTransfersFastest);
-        tab2numOfTransfers.setText(numOfTransfersLeast);
+        tab1numOfTransfers.setText(Integer.toString(dijkstra.numOfTransfersFastest));
+        tab2numOfTransfers.setText(Integer.toString(dijkstra.numOfTransfersLeast));
 
         //Stops
         int numOfStopsFastest = dijkstra.fastestPath.size() - dijkstra.numOfTransfersFastest - 1;
         int numOfStopsLeast = dijkstra.leastTransferspath.size() - dijkstra.numOfTransfersLeast - 1;
-        String numOfStopsFastestStr = Integer.toString(numOfStopsFastest) + " Stops";
-        String numOfStopsLeastStr = Integer.toString(numOfStopsLeast) + " Stops";
-        tab1numOfStops.setText(numOfStopsFastestStr);
-        tab2numOfStops.setText(numOfStopsLeastStr);
+        tab1numOfStops.setText(Integer.toString(numOfStopsFastest));
+        tab2numOfStops.setText(Integer.toString(numOfStopsLeast));
 
         /*
             Setting the display path on the xml file.
@@ -100,105 +94,735 @@ public class Activity2 extends AppCompatActivity {
         tabSpec2.setIndicator("Least Transfers", null).setContent(R.id.tab2);
         tabHost.addTab(tabSpec1);
         tabHost.addTab(tabSpec2);
-
-        cardfare_button = findViewById(R.id.cardfareButton);
-        cardfare_button.setOnClickListener(x -> {
-            openCardfareActivity();
-        });
     }
 
     /**
-     * This method is used to open CardfareActivity.class
+     * This method is used to set the display paths of the journey
+     * @param arrFastest                Fastest Route in an ArrayList
+     * @param numOfTransfersFastest     Number of transfers in this journey
+     * @param arrLeast                  Route with Least Transfers in an ArrayList
+     * @param numOfTransfersLeast       Number of transfers in this journey
+     * @param start                     Start point
+     * @param destination               End point
      */
-    public void openCardfareActivity() {
-        Intent intent = new Intent(this, CardfareActivity.class);
-        startActivity(intent);
+    private void setDisplayPath(ArrayList<String> arrFastest, int numOfTransfersFastest,
+                                ArrayList<String> arrLeast, int numOfTransfersLeast, String start, String destination) {
+        TextView tab1startStation1 = findViewById(R.id.tab1startStation1);
+        TextView tab1startStation2 = findViewById(R.id.tab1startStation2);
+        TextView tab1startStation3 = findViewById(R.id.tab1startStation3);
+        TextView tab1startStation4 = findViewById(R.id.tab1startStation4);
+        TextView tab1startStation5 = findViewById(R.id.tab1startStation5);
+        TextView tab1endStation1 = findViewById(R.id.tab1endStation1);
+        TextView tab1endStation2 = findViewById(R.id.tab1endStation2);
+        TextView tab1endStation3 = findViewById(R.id.tab1endStation3);
+        TextView tab1endStation4 = findViewById(R.id.tab1endStation4);
+        TextView tab1endStation5 = findViewById(R.id.tab1endStation5);
+        ImageView tab1startCircle1 = findViewById(R.id.tab1startCircle1);
+        ImageView tab1startCircle2 = findViewById(R.id.tab1startCircle2);
+        ImageView tab1startCircle3 = findViewById(R.id.tab1startCircle3);
+        ImageView tab1startCircle4 = findViewById(R.id.tab1startCircle4);
+        ImageView tab1startCircle5 = findViewById(R.id.tab1startCircle5);
+        ImageView tab1endCircle1 = findViewById(R.id.tab1endCircle1);
+        ImageView tab1endCircle2 = findViewById(R.id.tab1endCircle2);
+        ImageView tab1endCircle3 = findViewById(R.id.tab1endCircle3);
+        ImageView tab1endCircle4 = findViewById(R.id.tab1endCircle4);
+        ImageView tab1endCircle5 = findViewById(R.id.tab1endCircle5);
+        ImageView tab1Arrow2 = findViewById(R.id.tab1Arrow2);
+        ImageView tab1Arrow3 = findViewById(R.id.tab1Arrow3);
+        ImageView tab1Arrow4 = findViewById(R.id.tab1Arrow4);
+        ImageView tab1Arrow5 = findViewById(R.id.tab1Arrow5);
+        TextView tab1numOfStops1 = findViewById(R.id.tab1numOfStops1);
+        TextView tab1numOfStops2 = findViewById(R.id.tab1numOfStops2);
+        TextView tab1numOfStops3 = findViewById(R.id.tab1numOfStops3);
+        TextView tab1numOfStops4 = findViewById(R.id.tab1numOfStops4);
+        TextView tab1numOfStops5 = findViewById(R.id.tab1numOfStops5);
+
+        if (numOfTransfersFastest == 0) {
+            tab1startStation2.setVisibility(View.INVISIBLE);
+            tab1startStation3.setVisibility(View.INVISIBLE);
+            tab1startStation4.setVisibility(View.INVISIBLE);
+            tab1startStation5.setVisibility(View.INVISIBLE);
+            tab1endStation2.setVisibility(View.INVISIBLE);
+            tab1endStation3.setVisibility(View.INVISIBLE);
+            tab1endStation4.setVisibility(View.INVISIBLE);
+            tab1endStation5.setVisibility(View.INVISIBLE);
+            tab1startCircle2.setVisibility(View.INVISIBLE);
+            tab1startCircle3.setVisibility(View.INVISIBLE);
+            tab1startCircle4.setVisibility(View.INVISIBLE);
+            tab1startCircle5.setVisibility(View.INVISIBLE);
+            tab1endCircle2.setVisibility(View.INVISIBLE);
+            tab1endCircle3.setVisibility(View.INVISIBLE);
+            tab1endCircle4.setVisibility(View.INVISIBLE);
+            tab1endCircle5.setVisibility(View.INVISIBLE);
+            tab1Arrow2.setVisibility(View.INVISIBLE);
+            tab1Arrow3.setVisibility(View.INVISIBLE);
+            tab1Arrow4.setVisibility(View.INVISIBLE);
+            tab1Arrow5.setVisibility(View.INVISIBLE);
+            tab1numOfStops2.setVisibility(View.INVISIBLE);
+            tab1numOfStops3.setVisibility(View.INVISIBLE);
+            tab1numOfStops4.setVisibility(View.INVISIBLE);
+            tab1numOfStops5.setVisibility(View.INVISIBLE);
+
+
+            String numOfStops = Integer.toString(arrFastest.size() - 1) + " Stop(s)";
+            tab1numOfStops1.setText(numOfStops);
+            tab1startStation1.setText(start);
+            tab1endStation1.setText(destination);
+            setCircleColour(arrFastest, tab1startCircle1, tab1endCircle1);
+
+        } else if (numOfTransfersFastest == 1) {
+            tab1startStation3.setVisibility(View.INVISIBLE);
+            tab1startStation4.setVisibility(View.INVISIBLE);
+            tab1startStation5.setVisibility(View.INVISIBLE);
+            tab1endStation3.setVisibility(View.INVISIBLE);
+            tab1endStation4.setVisibility(View.INVISIBLE);
+            tab1endStation5.setVisibility(View.INVISIBLE);
+            tab1startCircle3.setVisibility(View.INVISIBLE);
+            tab1startCircle4.setVisibility(View.INVISIBLE);
+            tab1startCircle5.setVisibility(View.INVISIBLE);
+            tab1endCircle3.setVisibility(View.INVISIBLE);
+            tab1endCircle4.setVisibility(View.INVISIBLE);
+            tab1endCircle5.setVisibility(View.INVISIBLE);
+            tab1Arrow3.setVisibility(View.INVISIBLE);
+            tab1Arrow4.setVisibility(View.INVISIBLE);
+            tab1Arrow5.setVisibility(View.INVISIBLE);
+            tab1numOfStops3.setVisibility(View.INVISIBLE);
+            tab1numOfStops4.setVisibility(View.INVISIBLE);
+            tab1numOfStops5.setVisibility(View.INVISIBLE);
+
+            //indexArr to store the index where there is an interchange
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersFastest);
+            int counterFastest = numOfTransfersFastest;
+
+            //This while-loop finds the interchange and puts it in the indexArr
+            for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
+                String trainStation1 = (arrFastest.get(i).split(" "))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterFastest--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+
+            //The following part of the program splits the array into different parts
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrFastest.get(i));
+            }
+
+            for (int i = second_part_number; i < arrFastest.size(); i++) {
+                secondPart.add(arrFastest.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            tab1numOfStops1.setText(numOfStops1);
+            tab1numOfStops2.setText(numOfStops2);
+            tab1startStation1.setText(start);
+            tab1endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab1startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab1endStation2.setText(destination);
+            setCircleColour(firstPart, tab1startCircle1, tab1endCircle1);
+            setCircleColour(secondPart, tab1startCircle2, tab1endCircle2);
+
+
+        } else if (numOfTransfersFastest == 2) {
+            tab1startStation4.setVisibility(View.INVISIBLE);
+            tab1startStation5.setVisibility(View.INVISIBLE);
+            tab1endStation4.setVisibility(View.INVISIBLE);
+            tab1endStation5.setVisibility(View.INVISIBLE);
+            tab1startCircle4.setVisibility(View.INVISIBLE);
+            tab1startCircle5.setVisibility(View.INVISIBLE);
+            tab1endCircle4.setVisibility(View.INVISIBLE);
+            tab1endCircle5.setVisibility(View.INVISIBLE);
+            tab1Arrow4.setVisibility(View.INVISIBLE);
+            tab1Arrow5.setVisibility(View.INVISIBLE);
+            tab1numOfStops4.setVisibility(View.INVISIBLE);
+            tab1numOfStops5.setVisibility(View.INVISIBLE);
+
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersFastest);
+            int counterFastest = numOfTransfersFastest;
+
+            //This while-loop finds the interchange
+            for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
+                String trainStation1 = (arrFastest.get(i).split(" "))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterFastest--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+            ArrayList<String> thirdPart = new ArrayList<>();
+
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+            int third_part_number = indexArr.get(1);
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrFastest.get(i));
+            }
+
+            for (int i = second_part_number; i <= third_part_number; i++) {
+                secondPart.add(arrFastest.get(i));
+            }
+
+            for (int i = third_part_number + 1; i < arrFastest.size(); i++) {
+                thirdPart.add(arrFastest.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            tab1numOfStops1.setText(numOfStops1);
+            tab1numOfStops2.setText(numOfStops2);
+            tab1numOfStops3.setText(numOfStops3);
+            tab1startStation1.setText(start);
+            tab1endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab1startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab1endStation2.setText(secondPart.get(secondPart.size() - 1).split(" ", 2)[1]);
+            tab1startStation3.setText(thirdPart.get(0).split(" ", 2)[1]);
+            tab1endStation3.setText(destination);
+            setCircleColour(firstPart, tab1startCircle1, tab1endCircle1);
+            setCircleColour(secondPart, tab1startCircle2, tab1endCircle2);
+            setCircleColour(thirdPart, tab1startCircle3, tab1endCircle3);
+
+        } else if (numOfTransfersFastest == 3) {
+            tab1startStation5.setVisibility(View.INVISIBLE);
+            tab1endStation5.setVisibility(View.INVISIBLE);
+            tab1startCircle5.setVisibility(View.INVISIBLE);
+            tab1endCircle5.setVisibility(View.INVISIBLE);
+            tab1Arrow5.setVisibility(View.INVISIBLE);
+            tab1numOfStops5.setVisibility(View.INVISIBLE);
+
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersFastest);
+            int counterFastest = numOfTransfersFastest;
+
+            //This while-loop finds the interchange
+            for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
+                String trainStation1 = (arrFastest.get(i).split(" "))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterFastest--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+            ArrayList<String> thirdPart = new ArrayList<>();
+            ArrayList<String> fourthPart = new ArrayList<>();
+
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+            int third_part_number = indexArr.get(1);
+            int fourth_part_number = indexArr.get(2);
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrFastest.get(i));
+            }
+
+            for (int i = second_part_number; i <= third_part_number; i++) {
+                secondPart.add(arrFastest.get(i));
+            }
+
+            for (int i = third_part_number + 1; i <= fourth_part_number; i++) {
+                thirdPart.add(arrFastest.get(i));
+            }
+
+            for (int i = fourth_part_number + 1; i < arrFastest.size(); i++) {
+                fourthPart.add(arrFastest.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
+            tab1numOfStops1.setText(numOfStops1);
+            tab1numOfStops2.setText(numOfStops2);
+            tab1numOfStops3.setText(numOfStops3);
+            tab1numOfStops4.setText(numOfStops4);
+            tab1startStation1.setText(start);
+            tab1endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab1startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab1endStation2.setText(secondPart.get(secondPart.size() - 1).split(" ", 2)[1]);
+            tab1startStation3.setText(thirdPart.get(0).split(" ", 2)[1]);
+            tab1endStation3.setText(thirdPart.get(thirdPart.size() - 1).split(" ", 2)[1]);
+            tab1startStation4.setText(fourthPart.get(0).split(" ", 2)[1]);
+            tab1endStation4.setText(destination);
+
+            setCircleColour(firstPart, tab1startCircle1, tab1endCircle1);
+            setCircleColour(secondPart, tab1startCircle2, tab1endCircle2);
+            setCircleColour(thirdPart, tab1startCircle3, tab1endCircle3);
+            setCircleColour(fourthPart, tab1startCircle4, tab1endCircle4);
+
+        } else if (numOfTransfersFastest == 4) {
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersFastest);
+            int counterFastest = numOfTransfersFastest;
+
+            //This while-loop finds the interchange
+            for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
+                String trainStation1 = (arrFastest.get(i).split(" "))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterFastest--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+            ArrayList<String> thirdPart = new ArrayList<>();
+            ArrayList<String> fourthPart = new ArrayList<>();
+            ArrayList<String> fifthPart = new ArrayList<>();
+
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+            int third_part_number = indexArr.get(1);
+            int fourth_part_number = indexArr.get(2);
+            int fifth_part_number = indexArr.get(3);
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrFastest.get(i));
+            }
+
+            for (int i = second_part_number; i <= third_part_number; i++) {
+                secondPart.add(arrFastest.get(i));
+            }
+
+            for (int i = third_part_number + 1; i <= fourth_part_number; i++) {
+                thirdPart.add(arrFastest.get(i));
+            }
+
+            for (int i = fourth_part_number + 1; i <= fifth_part_number; i++) {
+                fourthPart.add(arrFastest.get(i));
+            }
+
+            for (int i  = fifth_part_number + 1; i < arrFastest.size(); i++) {
+                fifthPart.add(arrFastest.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
+            String numOfStops5 = Integer.toString(fifthPart.size() - 1) + " Stop(s)";
+            tab1numOfStops1.setText(numOfStops1);
+            tab1numOfStops2.setText(numOfStops2);
+            tab1numOfStops3.setText(numOfStops3);
+            tab1numOfStops4.setText(numOfStops4);
+            tab1numOfStops5.setText(numOfStops5);
+            tab1startStation1.setText(start);
+            tab1endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab1startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab1endStation2.setText(secondPart.get(secondPart.size() - 1).split(" ", 2)[1]);
+            tab1startStation3.setText(thirdPart.get(0).split(" ", 2)[1]);
+            tab1endStation3.setText(thirdPart.get(thirdPart.size() - 1).split(" ", 2)[1]);
+            tab1startStation4.setText(fourthPart.get(0).split(" ", 2)[1]);
+            tab1endStation4.setText(fourthPart.get(fourthPart.size() - 1).split(" ", 2)[1]);
+            tab1startStation5.setText(fifthPart.get(0).split(" ", 2)[1]);
+            setCircleColour(firstPart, tab1startCircle1, tab1endCircle1);
+            setCircleColour(secondPart, tab1startCircle2, tab1endCircle2);
+            setCircleColour(thirdPart, tab1startCircle3, tab1endCircle3);
+            setCircleColour(fourthPart, tab1startCircle4, tab1endCircle4);
+            setCircleColour(fifthPart, tab1startCircle5, tab1endCircle5);
+        }
+
+
+        //For Least Transfers
+        TextView tab2startStation1 = findViewById(R.id.tab2startStation1);
+        TextView tab2startStation2 = findViewById(R.id.tab2startStation2);
+        TextView tab2startStation3 = findViewById(R.id.tab2startStation3);
+        TextView tab2startStation4 = findViewById(R.id.tab2startStation4);
+        TextView tab2startStation5 = findViewById(R.id.tab2startStation5);
+        TextView tab2endStation1 = findViewById(R.id.tab2endStation1);
+        TextView tab2endStation2 = findViewById(R.id.tab2endStation2);
+        TextView tab2endStation3 = findViewById(R.id.tab2endStation3);
+        TextView tab2endStation4 = findViewById(R.id.tab2endStation4);
+        TextView tab2endStation5 = findViewById(R.id.tab2endStation5);
+        ImageView tab2startCircle1 = findViewById(R.id.tab2startCircle1);
+        ImageView tab2startCircle2 = findViewById(R.id.tab2startCircle2);
+        ImageView tab2startCircle3 = findViewById(R.id.tab2startCircle3);
+        ImageView tab2startCircle4 = findViewById(R.id.tab2startCircle4);
+        ImageView tab2startCircle5 = findViewById(R.id.tab2startCircle5);
+        ImageView tab2endCircle1 = findViewById(R.id.tab2endCircle1);
+        ImageView tab2endCircle2 = findViewById(R.id.tab2endCircle2);
+        ImageView tab2endCircle3 = findViewById(R.id.tab2endCircle3);
+        ImageView tab2endCircle4 = findViewById(R.id.tab2endCircle4);
+        ImageView tab2endCircle5 = findViewById(R.id.tab2endCircle5);
+        ImageView tab2Arrow2 = findViewById(R.id.tab2Arrow2);
+        ImageView tab2Arrow3 = findViewById(R.id.tab2Arrow3);
+        ImageView tab2Arrow4 = findViewById(R.id.tab2Arrow4);
+        ImageView tab2Arrow5 = findViewById(R.id.tab2Arrow5);
+        TextView tab2numOfStops1 = findViewById(R.id.tab2numOfStops1);
+        TextView tab2numOfStops2 = findViewById(R.id.tab2numOfStops2);
+        TextView tab2numOfStops3 = findViewById(R.id.tab2numOfStops3);
+        TextView tab2numOfStops4 = findViewById(R.id.tab2numOfStops4);
+        TextView tab2numOfStops5 = findViewById(R.id.tab2numOfStops5);
+
+        if (numOfTransfersLeast == 0) {
+            tab2startStation2.setVisibility(View.INVISIBLE);
+            tab2startStation3.setVisibility(View.INVISIBLE);
+            tab2startStation4.setVisibility(View.INVISIBLE);
+            tab2startStation5.setVisibility(View.INVISIBLE);
+            tab2endStation2.setVisibility(View.INVISIBLE);
+            tab2endStation3.setVisibility(View.INVISIBLE);
+            tab2endStation4.setVisibility(View.INVISIBLE);
+            tab2endStation5.setVisibility(View.INVISIBLE);
+            tab2startCircle2.setVisibility(View.INVISIBLE);
+            tab2startCircle3.setVisibility(View.INVISIBLE);
+            tab2startCircle4.setVisibility(View.INVISIBLE);
+            tab2startCircle5.setVisibility(View.INVISIBLE);
+            tab2endCircle2.setVisibility(View.INVISIBLE);
+            tab2endCircle3.setVisibility(View.INVISIBLE);
+            tab2endCircle4.setVisibility(View.INVISIBLE);
+            tab2endCircle5.setVisibility(View.INVISIBLE);
+            tab2Arrow2.setVisibility(View.INVISIBLE);
+            tab2Arrow3.setVisibility(View.INVISIBLE);
+            tab2Arrow4.setVisibility(View.INVISIBLE);
+            tab2Arrow5.setVisibility(View.INVISIBLE);
+            tab2numOfStops2.setVisibility(View.INVISIBLE);
+            tab2numOfStops3.setVisibility(View.INVISIBLE);
+            tab2numOfStops4.setVisibility(View.INVISIBLE);
+            tab2numOfStops5.setVisibility(View.INVISIBLE);
+
+            String numOfStops = Integer.toString(arrLeast.size() - 1) + " Stop(s)";
+            tab2numOfStops1.setText(numOfStops);
+            tab2startStation1.setText(start);
+            tab2endStation1.setText(destination);
+            setCircleColour(arrFastest, tab2startCircle1, tab2endCircle1);
+
+        } else if (numOfTransfersLeast == 1) {
+            tab2startStation3.setVisibility(View.INVISIBLE);
+            tab2startStation4.setVisibility(View.INVISIBLE);
+            tab2startStation5.setVisibility(View.INVISIBLE);
+            tab2endStation3.setVisibility(View.INVISIBLE);
+            tab2endStation4.setVisibility(View.INVISIBLE);
+            tab2endStation5.setVisibility(View.INVISIBLE);
+            tab2startCircle3.setVisibility(View.INVISIBLE);
+            tab2startCircle4.setVisibility(View.INVISIBLE);
+            tab2startCircle5.setVisibility(View.INVISIBLE);
+            tab2endCircle3.setVisibility(View.INVISIBLE);
+            tab2endCircle4.setVisibility(View.INVISIBLE);
+            tab2endCircle5.setVisibility(View.INVISIBLE);
+            tab2Arrow3.setVisibility(View.INVISIBLE);
+            tab2Arrow4.setVisibility(View.INVISIBLE);
+            tab2Arrow5.setVisibility(View.INVISIBLE);
+            tab2numOfStops3.setVisibility(View.INVISIBLE);
+            tab2numOfStops4.setVisibility(View.INVISIBLE);
+            tab2numOfStops5.setVisibility(View.INVISIBLE);
+
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersLeast);
+            int counterLeast = numOfTransfersLeast;
+
+            //This while-loop finds the interchange
+            for (int i = 0; (counterLeast > 0 && i < arrLeast.size()); i++) {
+                String trainStation1 = (arrLeast.get(i).split(" "))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterLeast--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrLeast.get(i));
+            }
+
+            for (int i = second_part_number; i < arrLeast.size(); i++) {
+                secondPart.add(arrLeast.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            tab2numOfStops1.setText(numOfStops1);
+            tab2numOfStops2.setText(numOfStops2);
+            tab2startStation1.setText(start);
+            tab2endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab2startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab2endStation2.setText(destination);
+            setCircleColour(firstPart, tab2startCircle1, tab2endCircle1);
+            setCircleColour(secondPart, tab2startCircle2, tab2endCircle2);
+
+        } else if (numOfTransfersLeast == 2) {
+            tab2startStation4.setVisibility(View.INVISIBLE);
+            tab2startStation5.setVisibility(View.INVISIBLE);
+            tab2endStation4.setVisibility(View.INVISIBLE);
+            tab2endStation5.setVisibility(View.INVISIBLE);
+            tab2startCircle4.setVisibility(View.INVISIBLE);
+            tab2startCircle5.setVisibility(View.INVISIBLE);
+            tab2endCircle4.setVisibility(View.INVISIBLE);
+            tab2endCircle5.setVisibility(View.INVISIBLE);
+            tab2Arrow4.setVisibility(View.INVISIBLE);
+            tab2Arrow5.setVisibility(View.INVISIBLE);
+            tab2numOfStops4.setVisibility(View.INVISIBLE);
+            tab2numOfStops5.setVisibility(View.INVISIBLE);
+
+
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersLeast);
+            int counterLeast = numOfTransfersLeast;
+
+            //This while-loop finds the interchange
+            for (int i = 0; (counterLeast > 0 && i < arrLeast.size()); i++) {
+                String trainStation1 = (arrLeast.get(i).split(" "))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterLeast--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+            ArrayList<String> thirdPart = new ArrayList<>();
+
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+            int third_part_number = indexArr.get(1);
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrLeast.get(i));
+            }
+
+            for (int i = second_part_number; i <= third_part_number; i++) {
+                secondPart.add(arrLeast.get(i));
+            }
+
+            for (int i = third_part_number + 1; i < arrLeast.size(); i++) {
+                thirdPart.add(arrLeast.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            tab2numOfStops1.setText(numOfStops1);
+            tab2numOfStops2.setText(numOfStops2);
+            tab2numOfStops3.setText(numOfStops3);
+            tab2startStation1.setText(start);
+            tab2endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab2startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab2endStation2.setText(secondPart.get(secondPart.size() - 1).split(" ", 2)[1]);
+            tab2startStation3.setText(thirdPart.get(0).split(" ", 2)[1]);
+            tab2endStation3.setText(destination);
+
+            setCircleColour(firstPart, tab2startCircle1, tab2endCircle1);
+            setCircleColour(secondPart, tab2startCircle2, tab2endCircle2);
+            setCircleColour(thirdPart, tab2startCircle3, tab2endCircle3);
+
+        } else if (numOfTransfersLeast == 3) {
+            tab2startStation5.setVisibility(View.INVISIBLE);
+            tab2endStation5.setVisibility(View.INVISIBLE);
+            tab2startCircle5.setVisibility(View.INVISIBLE);
+            tab2endCircle5.setVisibility(View.INVISIBLE);
+            tab2Arrow5.setVisibility(View.INVISIBLE);
+            tab2numOfStops5.setVisibility(View.INVISIBLE);
+
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersLeast);
+            int counterLeast = numOfTransfersLeast;
+
+            //This while-loop finds the interchange
+            for (int i = 0; (counterLeast > 0 && i < arrLeast.size()); i++) {
+                String trainStation1 = (arrLeast.get(i).split(" "))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterLeast--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+            ArrayList<String> thirdPart = new ArrayList<>();
+            ArrayList<String> fourthPart = new ArrayList<>();
+
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+            int third_part_number = indexArr.get(1);
+            int fourth_part_number = indexArr.get(2);
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrLeast.get(i));
+            }
+
+            for (int i = second_part_number; i <= third_part_number; i++) {
+                secondPart.add(arrLeast.get(i));
+            }
+
+            for (int i = third_part_number + 1; i <= fourth_part_number; i++) {
+                thirdPart.add(arrLeast.get(i));
+            }
+
+            for (int i = fourth_part_number + 1; i < arrLeast.size(); i++) {
+                fourthPart.add(arrLeast.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
+            tab2numOfStops1.setText(numOfStops1);
+            tab2numOfStops2.setText(numOfStops2);
+            tab2numOfStops3.setText(numOfStops3);
+            tab2numOfStops4.setText(numOfStops4);
+            tab2startStation1.setText(start);
+            tab2endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab2startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab2endStation2.setText(secondPart.get(secondPart.size() - 1).split(" ", 2)[1]);
+            tab2startStation3.setText(thirdPart.get(0).split(" ", 2)[1]);
+            tab2endStation3.setText(thirdPart.get(thirdPart.size() - 1).split(" ", 2)[1]);
+            tab2startStation4.setText(fourthPart.get(0).split(" ", 2)[1]);
+            tab2endStation4.setText(destination);
+
+            setCircleColour(firstPart, tab2startCircle1, tab2endCircle1);
+            setCircleColour(secondPart, tab2startCircle2, tab2endCircle2);
+            setCircleColour(thirdPart, tab2startCircle3, tab2endCircle3);
+            setCircleColour(fourthPart, tab2startCircle4, tab2endCircle4);
+
+        } else if (numOfTransfersLeast == 4) {
+            ArrayList<Integer> indexArr = new ArrayList<>(numOfTransfersLeast);
+            int counterLeast = numOfTransfersLeast;
+
+            //This while-loop finds the interchange
+            for (int i = 0; (counterLeast > 0 && i < arrFastest.size()); i++) {
+                String trainStation1 = (arrLeast.get(i).split(" "))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+
+                if (trainStation1.equals(trainStation2)) {
+                    indexArr.add(i);
+                    counterLeast--;
+                }
+            }
+
+            //Used for displaying different journeys for transfers
+            ArrayList<String> firstPart = new ArrayList<>();
+            ArrayList<String> secondPart = new ArrayList<>();
+            ArrayList<String> thirdPart = new ArrayList<>();
+            ArrayList<String> fourthPart = new ArrayList<>();
+            ArrayList<String> fifthPart = new ArrayList<>();
+
+            int first_part_number = indexArr.get(0);
+            int second_part_number = indexArr.get(0) + 1;
+            int third_part_number = indexArr.get(1);
+            int fourth_part_number = indexArr.get(2);
+            int fifth_part_number = indexArr.get(3);
+
+            for (int i = 0; i <= first_part_number; i++) {
+                firstPart.add(arrLeast.get(i));
+            }
+
+            for (int i = second_part_number; i <= third_part_number; i++) {
+                secondPart.add(arrLeast.get(i));
+            }
+
+            for (int i = third_part_number + 1; i <= fourth_part_number; i++) {
+                thirdPart.add(arrLeast.get(i));
+            }
+
+            for (int i = fourth_part_number + 1; i <= fifth_part_number; i++) {
+                fourthPart.add(arrLeast.get(i));
+            }
+
+            for (int i  = fifth_part_number + 1; i < arrLeast.size(); i++) {
+                fifthPart.add(arrLeast.get(i));
+            }
+
+            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
+            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
+            String numOfStop5 = Integer.toString(fifthPart.size() - 1) + " Stop(s)";
+            tab2numOfStops1.setText(numOfStops1);
+            tab2numOfStops2.setText(numOfStops2);
+            tab2numOfStops3.setText(numOfStops3);
+            tab2numOfStops4.setText(numOfStops4);
+            tab2numOfStops5.setText(numOfStop5);
+            tab2startStation1.setText(start);
+            tab2endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
+            tab2startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
+            tab2endStation2.setText(secondPart.get(secondPart.size() - 1).split(" ", 2)[1]);
+            tab2startStation3.setText(thirdPart.get(0).split(" ", 2)[1]);
+            tab2endStation3.setText(thirdPart.get(thirdPart.size() - 1).split(" ", 2)[1]);
+            tab2startStation4.setText(fourthPart.get(0).split(" ", 2)[1]);
+            tab2endStation4.setText(fourthPart.get(fourthPart.size() - 1).split(" ", 2)[1]);
+            tab2startStation5.setText(fifthPart.get(0).split(" ", 2)[1]);
+
+            setCircleColour(firstPart, tab2startCircle1, tab2endCircle1);
+            setCircleColour(secondPart, tab2startCircle2, tab2endCircle2);
+            setCircleColour(thirdPart, tab2startCircle3, tab2endCircle3);
+            setCircleColour(fourthPart, tab2startCircle4, tab2endCircle4);
+            setCircleColour(fifthPart, tab2startCircle5, tab2endCircle5);
+        }
     }
 
     /**
-     * This method is used to set the display path of the journey
+     * This method checks if the station lines are EW, NS, NE, CC, DT or LRT
+     * and sets the colour of the circle.
+     * @param array        Array of stations to check
+     * @param startCircle  Circle to colour
+     * @param endCircle    Circle to colour
      */
-    private void setDisplayPath(ArrayList<String> arrFastest, int numOfTransfersFastest, ArrayList<String> arrLeast, int numOfTransfersLeast, String start, String destination) {
-        RelativeLayout tab1 = findViewById(R.id.tab1);
-        RelativeLayout tab2 = findViewById(R.id.tab2);
-//
-//        if (numOfTransfersFastest != 0) {
-//            ArrayList<ImageView> fastestArrImage = new ArrayList<>();
-//            ArrayList<TextView> fastestArrDash = new ArrayList<>();
-//
-//            for (int i = 0; i < numOfTransfersFastest; i++) {
-//                //Creating new Buttons for the transfers
-//                ImageView imageFastest = new ImageView(this);
-//                imageFastest.setImageResource(R.mipmap.circle);
-//                //Need to take into account pixel to dp conversion
-//                imageFastest.setLayoutParams(new ViewGroup.LayoutParams(216, 100));
-//                fastestArrImage.add(imageFastest);
-//
-//                //Creating new journey dashes "|" for the transfers
-//                TextView dashFastest = new TextView(this);
-//                dashFastest.setText("|");
-//                dashFastest.setPadding(51, 0, 51, 0);
-//                fastestArrDash.add(dashFastest);
-//            }
-//
-//            for (int j = 0; j < fastestArrImage.size(); j++) {
-//                ImageView imgView = fastestArrImage.get(j);
-//                TextView textView = fastestArrDash.get(j);
-//                RelativeLayout.LayoutParams textLayout = (RelativeLayout.LayoutParams) textView.getLayoutParams();
-//
-//
-//                tab1.addView(imgView);
-//                tab1.addView(textView);
-//
-//
-////              RelativeLayout.LayoutParams params= new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
-////              params.addRule(RelativeLayout.BELOW, R.id.below_id);
-////              viewToLayout.setLayoutParams(params);
-//            }
-//
-//        } else {
-//            TextView startStationFastest = findViewById(R.id.startStop);
-//            startStationFastest.setText(start);
-//            TextView endStationFastest = findViewById(R.id.endStop);
-//            endStationFastest.setText(destination);
-//        }
-//
-//        if (numOfTransfersLeast != 0) {
-//
-//        } else {
-//            TextView startStationLeast = findViewById(R.id.startStop2);
-//            startStationLeast.setText(start);
-//            TextView endStationLeast = findViewById(R.id.endStop2);
-//            endStationLeast.setText(destination);
-//        }
-        String string1 = new String();
-        for (String station: arrFastest) {
-            string1 = string1 + station;
-            if (station.equals(arrFastest.get(arrFastest.size() - 1))) {
-                string1 = string1 + " ";
-            } else {
-                string1 = string1 + " ->";
-            }
-        }
-        TextView textView1 = new TextView(this);
-        textView1.setText(string1);
-        tab1.addView(textView1);
-        RelativeLayout.LayoutParams textLayout1 = (RelativeLayout.LayoutParams) textView1.getLayoutParams();
-        textLayout1.addRule(RelativeLayout.CENTER_IN_PARENT);
+    private void setCircleColour(ArrayList<String> array, ImageView startCircle, ImageView endCircle) {
+        String line[] = array.get(0).split(" ");
+        String trainLine = line[0];
 
-        String string2 = new String();
-        for (String station: arrLeast) {
-            string2 = string2 + station;
-            if (station.equals(arrLeast.get(arrLeast.size() - 1))) {
-                string2 = string2 + " ";
-            } else {
-                string2 = string2 + " ->";
-            }
+        switch (trainLine) {
+            case "EW":
+                startCircle.setColorFilter(startCircle.getContext().getResources().getColor(R.color.EW));
+                endCircle.setColorFilter(endCircle.getContext().getResources().getColor(R.color.EW));
+                break;
+
+            case "NS":
+                startCircle.setColorFilter(startCircle.getContext().getResources().getColor(R.color.NS));
+                endCircle.setColorFilter(endCircle.getContext().getResources().getColor(R.color.NS));
+                break;
+
+            case "NE":
+                startCircle.setColorFilter(startCircle.getContext().getResources().getColor(R.color.NE));
+                endCircle.setColorFilter(endCircle.getContext().getResources().getColor(R.color.NE));
+                break;
+
+            case "CC":
+                startCircle.setColorFilter(startCircle.getContext().getResources().getColor(R.color.CC));
+                endCircle.setColorFilter(endCircle.getContext().getResources().getColor(R.color.CC));
+                break;
+
+            case "DT":
+                startCircle.setColorFilter(startCircle.getContext().getResources().getColor(R.color.DT));
+                endCircle.setColorFilter(endCircle.getContext().getResources().getColor(R.color.DT));
+                break;
+
+            default:
+                startCircle.setColorFilter(startCircle.getContext().getResources().getColor(R.color.LRT));
+                endCircle.setColorFilter(endCircle.getContext().getResources().getColor(R.color.LRT));
+                break;
         }
-        TextView textView2 = new TextView(this);
-        textView2.setText(string2);
-        tab2.addView(textView2);
-        RelativeLayout.LayoutParams textLayout2 = (RelativeLayout.LayoutParams) textView2.getLayoutParams();
-        textLayout2.addRule(RelativeLayout.CENTER_IN_PARENT);
     }
+
 }

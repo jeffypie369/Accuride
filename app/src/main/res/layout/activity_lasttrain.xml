@@ -8,26 +8,27 @@
     android:orientation="vertical">
 
     <RelativeLayout
-        android:layout_weight="2"
         android:layout_width="match_parent"
-        android:layout_height="0dp">
+        android:layout_height="0dp"
+        android:layout_weight="2">
 
         <TextView
             android:id="@+id/textTitle"
-            android:textSize="16sp"
-            android:text="Click on any line to view the last train timings"
-            android:layout_centerInParent="true"
-            android:textColor="@android:color/black"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Click on any line to view the last train timings"
+            android:textColor="@android:color/black"
+            android:textSize="16sp" />
+
         <TextView
             android:id="@+id/disclaimer"
-            android:textSize="14sp"
-            android:text="Information taken from sgtrains.com"
-            android:layout_centerInParent="true"
-            android:layout_below="@id/textTitle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textTitle"
+            android:layout_centerInParent="true"
+            android:text="Information taken from sgtrains.com"
+            android:textSize="14sp" />
 
     </RelativeLayout>
 

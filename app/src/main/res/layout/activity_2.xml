@@ -1,229 +1,632 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/relative_layout"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:id="@+id/linear_layout"
     tools:context=".Activity2">
 
-    <!-- Start and Destination string at the top is here -->
+    <!-- Title of Application goes into this layout -->
     <RelativeLayout
-        android:id="@+id/relativelayout2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="19dp">
+        android:layout_height="0dp"
+        android:id="@+id/accurideTitle"
+        android:background="#CECECE"
+        android:layout_weight="1">
 
-        <!-- Start and Destination String at the top -->
+        <!-- Title of Application -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Accuride SG"
+            android:textColor="@color/tw__composer_white"
+            android:textSize="24sp"
+            android:textStyle="bold|italic" />
+
+    </RelativeLayout>
+
+    <!-- Start and Destination strings go here -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/journeyDetails"
+        android:layout_weight="1">
+
+        <!-- Dash -->
         <TextView
             android:id="@+id/dash"
             android:layout_width="25dp"
             android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/start_string"
-            android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="false"
             android:layout_centerInParent="true"
             android:gravity="center"
             android:text="@string/dash"
             android:textColor="@android:color/black"
-            android:textSize="18sp"
+            android:textSize="24sp"
             android:visibility="visible" />
 
+        <!-- Start String -->
         <TextView
             android:id="@+id/start_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
             android:layout_toLeftOf="@id/dash"
             android:layout_toStartOf="@id/dash"
             android:gravity="center"
             android:text="@string/start_string"
             android:textColor="@android:color/black"
-            android:visibility="visible" />
+            android:textStyle="bold"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true" />
 
+        <!-- Destination String -->
         <TextView
             android:id="@+id/destination_string"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/start_string"
             android:layout_toEndOf="@id/dash"
             android:layout_toRightOf="@id/dash"
             android:gravity="center"
             android:text="@string/destination_string"
             android:textColor="@android:color/black"
-            android:visibility="visible" />
+            android:visibility="visible"
+            android:textStyle="bold"
+            android:layout_alignParentRight="true" />
+
     </RelativeLayout>
 
-    <TabHost
+    <!-- Tab Host containing Fastest and Least Transfers are here -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+
+        <TabHost
         android:id="@android:id/tabhost"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/relativelayout2"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true">
 
         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TabWidget
+            android:id="@android:id/tabs"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content" />
 
-            <TabWidget
-                android:id="@android:id/tabs"
+        <FrameLayout
+        android:id="@android:id/tabcontent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Tab 1 -->
+        <LinearLayout
+        android:id="@+id/tab1"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+            <!-- Layout to contain Time Taken, Stops and Transfers -->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="0dp"
+                android:layout_weight="2">
 
-            <FrameLayout
-                android:id="@android:id/tabcontent"
+                <!-- Minutes, Stops, Transfers -->
+                <TextView
+                    android:id="@+id/tab1minutes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Time Taken: "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tab1numOfStops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tab1minutes"
+                    android:layout_below="@+id/tab1minutes"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Number of Stops: "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tab1numOfTransfers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tab1minutes"
+                    android:layout_below="@+id/tab1numOfStops"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="Number of Transfers: "
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <!-- Actual time taken, num of stops and num of transfers -->
+                <TextView
+                    android:id="@+id/tab1timeTaken"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginEnd="30dp"
+                    android:layout_marginRight="30dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="10dp"
+                    android:text="-1 Minutes"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tab1Stops"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@+id/tab1minutes"
+                    android:layout_marginEnd="60dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="10dp"
+                    android:text="-1"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="61dp" />
+
+                <TextView
+                    android:id="@+id/tab1Transfers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/tab1Stops"
+                    android:layout_marginEnd="60dp"
+                    android:layout_marginRight="60dp"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="30dp"
+                    android:paddingRight="30dp"
+                    android:paddingTop="10dp"
+                    android:textStyle="bold"
+                    android:text="-1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+            </RelativeLayout>
+
+            <!-- Layout to contain journey path -->
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="0dp"
+                android:layout_weight="3">
 
-                <!-- Tab 1 -->
-                <RelativeLayout
-                    android:id="@+id/tab1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                <!-- Start Station name 1 -->
+                <TextView
+                    android:id="@+id/tab1startStation1"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1numOfStops1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1startStation1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
 
-                    <!-- Minutes, Stops, Transfers and Cardfare Button -->
-                    <TextView
-                        android:id="@+id/tab1minutes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:gravity="center"
-                        android:paddingRight="40dp"
-                        android:paddingTop="20dp"
-                        android:text="@string/minutes"
-                        android:textSize="16sp"
-                        tools:ignore="NotSibling" />
+                <!-- End Station name 1 -->
+                <TextView
+                    android:id="@+id/tab1endStation1"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab1numOfStops1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1endStation1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
 
-                    <TextView
-                        android:id="@+id/tab1numOfStops"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/tab1minutes"
-                        android:layout_below="@+id/tab1minutes"
-                        android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp"
-                        android:text="@string/stops"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/tab1numOfTransfers"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignLeft="@+id/tab1minutes"
-                        android:layout_below="@+id/tab1numOfStops"
-                        android:gravity="center"
-                        android:paddingBottom="10dp"
-                        android:paddingTop="10dp"
-                        android:text="Transfers"
-                        android:textSize="16sp" />
-
-                    <Button
-                        android:id="@+id/cardfareButton"
-                        android:layout_width="78dp"
-                        android:layout_height="35dp"
-                        android:layout_alignLeft="@+id/tab1minutes"
-                        android:layout_below="@+id/tab1numOfTransfers"
-                        android:text="@string/card_fare"
-                        android:textSize="8sp" />
-
-                    <!-- Display of path -->
-                    <ImageView
-                        android:id="@+id/startCircle"
-                        android:layout_width="108dp"
-                        android:layout_height="50dp"
-                        android:layout_above="@+id/tab1numOfStops"
-                        android:layout_alignBaseline="@+id/tab1minutes"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginEnd="120dp"
-                        android:layout_marginRight="120dp"
-                        app:srcCompat="@mipmap/circle" />
-
-                    <TextView
-                        android:id="@+id/journeyDash"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/startCircle"
-                        android:paddingLeft="51dp"
-                        android:paddingRight="51dp"
-                        android:text="|"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-
-                    <ImageView
-                    android:id="@+id/endCircle"
-                    android:layout_width="108dp"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/journeyDash"
+                <!-- Start Circle 1 -->
+                <ImageView
+                    android:id="@+id/tab1startCircle1"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab1startStation1"
+                    android:layout_alignBottom="@id/tab1startStation1"
                     app:srcCompat="@mipmap/circle" />
 
-                    <TextView
-                        android:id="@+id/startStop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tab1numOfStops"
-                        android:layout_marginLeft="-120dp"
-                        android:layout_marginStart="-120dp"
-                        android:layout_toEndOf="@+id/startCircle"
-                        android:layout_toRightOf="@+id/startCircle"
-                        android:text="TextView" />
+                <!-- End Circle 1 -->
+                <ImageView
+                    android:id="@+id/tab1endCircle1"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab1endStation1"
+                    android:layout_alignBottom="@id/tab1endStation1"
+                    app:srcCompat="@mipmap/circle" />
 
-                    <TextView
-                        android:id="@+id/trainDirection"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/endStop"
-                        android:layout_below="@+id/startStop"
-                        android:gravity="center"
-                        android:layout_toEndOf="@id/journeyDash"
-                        android:text="TextView"
-                        android:textSize="12sp"
-                        android:layout_toRightOf="@id/journeyDash" />
+                <!-- Arrow 1 -->
+                <ImageView
+                    android:id="@+id/tab1Arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab1endCircle1"
+                    android:layout_toRightOf="@id/tab1startCircle1"
+                    android:layout_below="@id/tab1numOfStops1"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
 
-                    <TextView
-                        android:id="@+id/endStop"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/tab1numOfTransfers"
-                        android:layout_marginStart="-120dp"
-                        android:layout_toEndOf="@+id/startCircle"
-                        android:text="TextView"
-                        android:layout_marginLeft="-120dp"
-                        android:layout_toRightOf="@+id/startCircle" />
+                <!-- Number of Stops 1 -->
+                <TextView
+                    android:id="@+id/tab1numOfStops1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
 
-                </RelativeLayout>
 
-                <!-- Tab 2 -->
-                <RelativeLayout
-                    android:id="@+id/tab2"
+                <!-- Start Station name 2 -->
+                <TextView
+                    android:id="@+id/tab1startStation2"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1numOfStops2"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1startStation2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 2 -->
+                <TextView
+                    android:id="@+id/tab1endStation2"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab1numOfStops2"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1endStation2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 2 -->
+                <ImageView
+                    android:id="@+id/tab1startCircle2"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab1startStation2"
+                    android:layout_alignBottom="@id/tab1startStation2"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 2 -->
+                <ImageView
+                    android:id="@+id/tab1endCircle2"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab1endStation2"
+                    android:layout_alignBottom="@id/tab1endStation2"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 2 -->
+                <ImageView
+                    android:id="@+id/tab1Arrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab1endCircle2"
+                    android:layout_toRightOf="@id/tab1startCircle2"
+                    android:layout_below="@id/tab1numOfStops2"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 2 -->
+                <TextView
+                    android:id="@+id/tab1numOfStops2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1Arrow1"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+
+                <!-- Start Station name 3 -->
+                <TextView
+                    android:id="@+id/tab1startStation3"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1numOfStops3"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1startStation3"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 3 -->
+                <TextView
+                    android:id="@+id/tab1endStation3"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab1numOfStops3"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1endStation3"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 3 -->
+                <ImageView
+                    android:id="@+id/tab1startCircle3"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab1startStation3"
+                    android:layout_alignBottom="@id/tab1startStation3"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 3 -->
+                <ImageView
+                    android:id="@+id/tab1endCircle3"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab1endStation3"
+                    android:layout_alignBottom="@id/tab1endStation3"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 3 -->
+                <ImageView
+                    android:id="@+id/tab1Arrow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab1endCircle3"
+                    android:layout_toRightOf="@id/tab1startCircle3"
+                    android:layout_below="@id/tab1numOfStops3"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 3 -->
+                <TextView
+                    android:id="@+id/tab1numOfStops3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1Arrow2"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+
+                <!-- Start Station name 4 -->
+                <TextView
+                    android:id="@+id/tab1startStation4"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1numOfStops4"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1startStation4"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 4 -->
+                <TextView
+                    android:id="@+id/tab1endStation4"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab1numOfStops4"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1endStation4"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 4 -->
+                <ImageView
+                    android:id="@+id/tab1startCircle4"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab1startStation4"
+                    android:layout_alignBottom="@id/tab1startStation4"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 4 -->
+                <ImageView
+                    android:id="@+id/tab1endCircle4"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab1endStation4"
+                    android:layout_alignBottom="@id/tab1endStation4"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 4 -->
+                <ImageView
+                    android:id="@+id/tab1Arrow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab1endCircle4"
+                    android:layout_toRightOf="@id/tab1startCircle4"
+                    android:layout_below="@id/tab1numOfStops4"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 4 -->
+                <TextView
+                    android:id="@+id/tab1numOfStops4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1Arrow3"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+
+                <!-- Start Station name 5 -->
+                <TextView
+                    android:id="@+id/tab1startStation5"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1numOfStops5"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1startStation5"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 5 -->
+                <TextView
+                    android:id="@+id/tab1endStation5"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab1numOfStops5"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab1endStation5"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 5 -->
+                <ImageView
+                    android:id="@+id/tab1startCircle5"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab1startStation5"
+                    android:layout_alignBottom="@id/tab1startStation5"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 5 -->
+                <ImageView
+                    android:id="@+id/tab1endCircle5"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab1endStation5"
+                    android:layout_alignBottom="@id/tab1endStation5"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 5 -->
+                <ImageView
+                    android:id="@+id/tab1Arrow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab1endCircle5"
+                    android:layout_toRightOf="@id/tab1startCircle5"
+                    android:layout_below="@id/tab1numOfStops5"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 5 -->
+                <TextView
+                    android:id="@+id/tab1numOfStops5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab1Arrow4"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!-- Tab 2 -->
+        <LinearLayout
+        android:id="@+id/tab2"
+        android:background="@drawable/border"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="5">
+
+            <!-- Layout to contain Time Taken, Stops and Transfers -->
+            <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical">
+                    android:layout_height="0dp"
+                    android:layout_weight="2">
 
-                    <!-- Minutes, Stops, Transfers and Cardfare Button -->
+                    <!-- Minutes, Stops, Transfers -->
                     <TextView
                         android:id="@+id/tab2minutes"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
                         android:gravity="center"
-                        android:paddingRight="40dp"
-                        android:paddingTop="20dp"
-                        android:text="@string/minutes"
-                        android:textSize="16sp"
-                        tools:ignore="NotSibling" />
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:text="Time Taken: "
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp" />
 
                     <TextView
                         android:id="@+id/tab2numOfStops"
@@ -233,8 +636,11 @@
                         android:layout_below="@+id/tab2minutes"
                         android:gravity="center"
                         android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:paddingTop="10dp"
-                        android:text="@string/stops"
+                        android:text="Number of Stops: "
+                        android:textColor="@color/colorBlack"
                         android:textSize="16sp" />
 
                     <TextView
@@ -245,89 +651,446 @@
                         android:layout_below="@+id/tab2numOfStops"
                         android:gravity="center"
                         android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
                         android:paddingTop="10dp"
-                        android:text="Transfers"
+                        android:text="Number of Transfers: "
+                        android:textColor="@color/colorBlack"
                         android:textSize="16sp" />
 
-                    <Button
-                        android:id="@+id/cardfareButton2"
-                        android:layout_width="78dp"
-                        android:layout_height="35dp"
-                        android:layout_alignLeft="@+id/tab2minutes"
-                        android:layout_below="@+id/tab2numOfTransfers"
-                        android:text="@string/card_fare"
-                        android:textSize="8sp" />
-
-                    <!-- Display of path -->
-                    <ImageView
-                        android:id="@+id/startCircle2"
-                        android:layout_width="108dp"
-                        android:layout_height="50dp"
-                        android:layout_above="@+id/tab2numOfStops"
-                        android:layout_alignBaseline="@+id/tab2minutes"
-                        android:layout_alignParentStart="true"
-                        android:layout_marginEnd="120dp"
-                        app:srcCompat="@mipmap/circle"
-                        android:layout_alignParentLeft="true"
-                        android:layout_marginRight="120dp" />
-
+                    <!-- Actual time taken, num of stops and num of transfers -->
                     <TextView
-                        android:id="@+id/journeyDash2"
+                        android:id="@+id/tab2timeTaken"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/startCircle2"
-                        android:paddingLeft="51dp"
-                        android:paddingRight="51dp"
-                        android:text="|"
-                        android:textSize="15sp"
-                        android:textStyle="bold"
-                        android:visibility="visible" />
-
-                    <ImageView
-                        android:id="@+id/endCircle2"
-                        android:layout_width="108dp"
-                        android:layout_height="50dp"
-                        android:layout_below="@+id/journeyDash2"
-                        app:srcCompat="@mipmap/circle" />
-
-                    <TextView
-                        android:id="@+id/startStop2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignBaseline="@+id/tab2numOfStops"
-                        android:layout_marginLeft="-120dp"
-                        android:layout_marginStart="-120dp"
-                        android:layout_toEndOf="@+id/startCircle2"
-                        android:layout_toRightOf="@+id/startCircle2"
-                        android:text="TextView" />
-
-                    <TextView
-                        android:id="@+id/trainDirection2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_above="@+id/endStop2"
-                        android:layout_below="@+id/startStop2"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginEnd="30dp"
+                        android:layout_marginRight="30dp"
                         android:gravity="center"
-                        android:layout_toEndOf="@id/journeyDash2"
-                        android:text="TextView"
-                        android:textSize="12sp"
-                        android:layout_toRightOf="@id/journeyDash2" />
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="10dp"
+                        android:text="-1 Minutes"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp" />
 
                     <TextView
-                        android:id="@+id/endStop2"
+                        android:id="@+id/tab2Stops"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_below="@+id/tab2numOfTransfers"
-                        android:layout_marginStart="-120dp"
-                        android:layout_toEndOf="@+id/startCircle2"
-                        android:text="TextView"
-                        android:layout_marginLeft="-120dp"
-                        android:layout_toRightOf="@+id/startCircle2" />
+                        android:layout_alignParentEnd="true"
+                        android:layout_below="@+id/tab2minutes"
+                        android:layout_marginEnd="60dp"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="10dp"
+                        android:text="-1"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="61dp" />
+
+                    <TextView
+                        android:id="@+id/tab2Transfers"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@+id/tab2Stops"
+                        android:layout_marginEnd="60dp"
+                        android:layout_marginRight="60dp"
+                        android:gravity="center"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="30dp"
+                        android:paddingRight="30dp"
+                        android:paddingTop="10dp"
+                        android:textStyle="bold"
+                        android:text="-1"
+                        android:textColor="@color/colorBlack"
+                        android:textSize="16sp" />
 
                 </RelativeLayout>
 
-            </FrameLayout>
-        </LinearLayout>
-    </TabHost>
+            <!-- Layout to contain journey path -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3">
 
-</RelativeLayout>
+                <!-- Start Station name 1 -->
+                <TextView
+                    android:id="@+id/tab2startStation1"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2numOfStops1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2startStation1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 1 -->
+                <TextView
+                    android:id="@+id/tab2endStation1"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab2numOfStops1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2endStation1"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 1 -->
+                <ImageView
+                    android:id="@+id/tab2startCircle1"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab2startStation1"
+                    android:layout_alignBottom="@id/tab2startStation1"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 1 -->
+                <ImageView
+                    android:id="@+id/tab2endCircle1"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab2endStation1"
+                    android:layout_alignBottom="@id/tab2endStation1"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 1 -->
+                <ImageView
+                    android:id="@+id/tab2Arrow1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab2endCircle1"
+                    android:layout_toRightOf="@id/tab2startCircle1"
+                    android:layout_below="@id/tab2numOfStops1"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 1 -->
+                <TextView
+                    android:id="@+id/tab2numOfStops1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+
+                <!-- Start Station name 2 -->
+                <TextView
+                    android:id="@+id/tab2startStation2"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2numOfStops2"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2startStation2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 2 -->
+                <TextView
+                    android:id="@+id/tab2endStation2"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab2numOfStops2"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2endStation2"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 2 -->
+                <ImageView
+                    android:id="@+id/tab2startCircle2"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab2startStation2"
+                    android:layout_alignBottom="@id/tab2startStation2"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 2 -->
+                <ImageView
+                    android:id="@+id/tab2endCircle2"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab2endStation2"
+                    android:layout_alignBottom="@id/tab2endStation2"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 2 -->
+                <ImageView
+                    android:id="@+id/tab2Arrow2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab2endCircle2"
+                    android:layout_toRightOf="@id/tab2startCircle2"
+                    android:layout_below="@id/tab2numOfStops2"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 2 -->
+                <TextView
+                    android:id="@+id/tab2numOfStops2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2Arrow1"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+
+                <!-- Start Station name 3 -->
+                <TextView
+                    android:id="@+id/tab2startStation3"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2numOfStops3"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2startStation3"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 3 -->
+                <TextView
+                    android:id="@+id/tab2endStation3"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab2numOfStops3"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2endStation3"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 3 -->
+                <ImageView
+                    android:id="@+id/tab2startCircle3"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab2startStation3"
+                    android:layout_alignBottom="@id/tab2startStation3"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 3 -->
+                <ImageView
+                    android:id="@+id/tab2endCircle3"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab2endStation3"
+                    android:layout_alignBottom="@id/tab2endStation3"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 3 -->
+                <ImageView
+                    android:id="@+id/tab2Arrow3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab2endCircle3"
+                    android:layout_toRightOf="@id/tab2startCircle3"
+                    android:layout_below="@id/tab2numOfStops3"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 3 -->
+                <TextView
+                    android:id="@+id/tab2numOfStops3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2Arrow2"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+
+                <!-- Start Station name 4 -->
+                <TextView
+                    android:id="@+id/tab2startStation4"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2numOfStops4"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2startStation4"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 4 -->
+                <TextView
+                    android:id="@+id/tab2endStation4"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab2numOfStops4"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2endStation4"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 4 -->
+                <ImageView
+                    android:id="@+id/tab2startCircle4"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab2startStation4"
+                    android:layout_alignBottom="@id/tab2startStation4"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 4 -->
+                <ImageView
+                    android:id="@+id/tab2endCircle4"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab2endStation4"
+                    android:layout_alignBottom="@id/tab2endStation4"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 4 -->
+                <ImageView
+                    android:id="@+id/tab2Arrow4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab2endCircle4"
+                    android:layout_toRightOf="@id/tab2startCircle4"
+                    android:layout_below="@id/tab2numOfStops4"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 4 -->
+                <TextView
+                    android:id="@+id/tab2numOfStops4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2Arrow3"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+
+                <!-- Start Station name 5 -->
+                <TextView
+                    android:id="@+id/tab2startStation5"
+                    android:layout_width="121dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2numOfStops5"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2startStation5"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp"
+                    android:layout_alignParentLeft="true" />
+
+                <!-- End Station name 5 -->
+                <TextView
+                    android:id="@+id/tab2endStation5"
+                    android:layout_width="114dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/tab2numOfStops5"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="10dp"
+                    android:text="tab2endStation5"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="14sp" />
+
+                <!-- Start Circle 5 -->
+                <ImageView
+                    android:id="@+id/tab2startCircle5"
+                    android:layout_width="57dp"
+                    android:layout_height="38dp"
+                    android:layout_toRightOf="@id/tab2startStation5"
+                    android:layout_alignBottom="@id/tab2startStation5"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- End Circle 5 -->
+                <ImageView
+                    android:id="@+id/tab2endCircle5"
+                    android:layout_width="57dp"
+                    android:layout_height="39dp"
+                    android:layout_toLeftOf="@+id/tab2endStation5"
+                    android:layout_alignBottom="@id/tab2endStation5"
+                    app:srcCompat="@mipmap/circle" />
+
+                <!-- Arrow 5 -->
+                <ImageView
+                    android:id="@+id/tab2Arrow5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tab2endCircle5"
+                    android:layout_toRightOf="@id/tab2startCircle5"
+                    android:layout_below="@id/tab2numOfStops5"
+                    android:tint="@color/colorBlack"
+                    app:srcCompat="@android:drawable/ic_menu_send" />
+
+                <!-- Number of Stops 5 -->
+                <TextView
+                    android:id="@+id/tab2numOfStops5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tab2Arrow4"
+                    android:text="-1 Stops"
+                    android:textColor="@color/colorBlack"
+                    android:textStyle="italic"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="10sp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        </FrameLayout>
+
+        </LinearLayout>
+
+        </TabHost>
+
+    </RelativeLayout>
+</LinearLayout>
