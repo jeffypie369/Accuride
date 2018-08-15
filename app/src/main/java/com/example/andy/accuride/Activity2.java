@@ -163,8 +163,13 @@ public class Activity2 extends AppCompatActivity {
             tab1numOfStops4.setVisibility(View.INVISIBLE);
             tab1numOfStops5.setVisibility(View.INVISIBLE);
 
+            String numOfStops;
+            if (arrFastest.size() - 1 == 1) {
+                numOfStops = "1 Stop";
+            } else {
+                numOfStops = Integer.toString(arrFastest.size() - 1) + " Stops";
+            }
 
-            String numOfStops = Integer.toString(arrFastest.size() - 1) + " Stop(s)";
             tab1numOfStops1.setText(numOfStops);
             tab1startStation1.setText(start);
             tab1endStation1.setText(destination);
@@ -221,8 +226,19 @@ public class Activity2 extends AppCompatActivity {
                 secondPart.add(arrFastest.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+
             tab1numOfStops1.setText(numOfStops1);
             tab1numOfStops2.setText(numOfStops2);
             tab1startStation1.setText(start);
@@ -282,9 +298,25 @@ public class Activity2 extends AppCompatActivity {
                 thirdPart.add(arrFastest.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
-            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            String numOfStops3;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+            if (thirdPart.size() - 1 == 1) {
+                numOfStops3 = "1 Stop";
+            } else {
+                numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stops";
+            }
+
             tab1numOfStops1.setText(numOfStops1);
             tab1numOfStops2.setText(numOfStops2);
             tab1numOfStops3.setText(numOfStops3);
@@ -347,10 +379,31 @@ public class Activity2 extends AppCompatActivity {
                 fourthPart.add(arrFastest.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
-            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
-            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            String numOfStops3;
+            String numOfStops4;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+            if (thirdPart.size() - 1 == 1) {
+                numOfStops3 = "1 Stop";
+            } else {
+                numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stops";
+            }
+            if (fourthPart.size() - 1 == 1) {
+                numOfStops4 = "1 Stop";
+            } else {
+                numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stops";
+            }
+
             tab1numOfStops1.setText(numOfStops1);
             tab1numOfStops2.setText(numOfStops2);
             tab1numOfStops3.setText(numOfStops3);
@@ -417,11 +470,37 @@ public class Activity2 extends AppCompatActivity {
                 fifthPart.add(arrFastest.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
-            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
-            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
-            String numOfStops5 = Integer.toString(fifthPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            String numOfStops3;
+            String numOfStops4;
+            String numOfStops5;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+            if (thirdPart.size() - 1 == 1) {
+                numOfStops3 = "1 Stop";
+            } else {
+                numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stops";
+            }
+            if (fourthPart.size() - 1 == 1) {
+                numOfStops4 = "1 Stop";
+            } else {
+                numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stops";
+            }
+            if (fifthPart.size() - 1 == 0) {
+                numOfStops5 = "1 Stop";
+            } else {
+                numOfStops5 = Integer.toString(fifthPart.size() - 1) + " Stops";
+            }
+
             tab1numOfStops1.setText(numOfStops1);
             tab1numOfStops2.setText(numOfStops2);
             tab1numOfStops3.setText(numOfStops3);
@@ -501,7 +580,13 @@ public class Activity2 extends AppCompatActivity {
             tab2numOfStops4.setVisibility(View.INVISIBLE);
             tab2numOfStops5.setVisibility(View.INVISIBLE);
 
-            String numOfStops = Integer.toString(arrLeast.size() - 1) + " Stop(s)";
+            String numOfStops;
+            if (arrLeast.size() - 1 == 1) {
+                numOfStops = "1 Stop";
+            } else {
+                numOfStops = Integer.toString(arrLeast.size() - 1) + " Stops";
+            }
+
             tab2numOfStops1.setText(numOfStops);
             tab2startStation1.setText(start);
             tab2endStation1.setText(destination);
@@ -556,8 +641,19 @@ public class Activity2 extends AppCompatActivity {
                 secondPart.add(arrLeast.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+
             tab2numOfStops1.setText(numOfStops1);
             tab2numOfStops2.setText(numOfStops2);
             tab2startStation1.setText(start);
@@ -617,9 +713,25 @@ public class Activity2 extends AppCompatActivity {
                 thirdPart.add(arrLeast.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
-            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            String numOfStops3;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+            if (thirdPart.size() - 1 == 1) {
+                numOfStops3 = "1 Stop";
+            } else {
+                numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stops";
+            }
+
             tab2numOfStops1.setText(numOfStops1);
             tab2numOfStops2.setText(numOfStops2);
             tab2numOfStops3.setText(numOfStops3);
@@ -683,10 +795,31 @@ public class Activity2 extends AppCompatActivity {
                 fourthPart.add(arrLeast.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
-            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
-            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            String numOfStops3;
+            String numOfStops4;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+            if (thirdPart.size() - 1 == 1) {
+                numOfStops3 = "1 Stop";
+            } else {
+                numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stops";
+            }
+            if (fourthPart.size() - 1 == 1) {
+                numOfStops4 = "1 Stop";
+            } else {
+                numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stops";
+            }
+
             tab2numOfStops1.setText(numOfStops1);
             tab2numOfStops2.setText(numOfStops2);
             tab2numOfStops3.setText(numOfStops3);
@@ -753,16 +886,42 @@ public class Activity2 extends AppCompatActivity {
                 fifthPart.add(arrLeast.get(i));
             }
 
-            String numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stop(s)";
-            String numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stop(s)";
-            String numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stop(s)";
-            String numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stop(s)";
-            String numOfStop5 = Integer.toString(fifthPart.size() - 1) + " Stop(s)";
+            String numOfStops1;
+            String numOfStops2;
+            String numOfStops3;
+            String numOfStops4;
+            String numOfStops5;
+            if (firstPart.size() - 1 == 1) {
+                numOfStops1 = "1 Stop";
+            } else {
+                numOfStops1 = Integer.toString(firstPart.size() - 1) + " Stops";
+            }
+            if (secondPart.size() - 1 == 1) {
+                numOfStops2 = "1 Stop";
+            } else {
+                numOfStops2 = Integer.toString(secondPart.size() - 1) + " Stops";
+            }
+            if (thirdPart.size() - 1 == 1) {
+                numOfStops3 = "1 Stop";
+            } else {
+                numOfStops3 = Integer.toString(thirdPart.size() - 1) + " Stops";
+            }
+            if (fourthPart.size() - 1 == 1) {
+                numOfStops4 = "1 Stop";
+            } else {
+                numOfStops4 = Integer.toString(fourthPart.size() - 1) + " Stops";
+            }
+            if (fifthPart.size() - 1 == 0) {
+                numOfStops5 = "1 Stop";
+            } else {
+                numOfStops5 = Integer.toString(fifthPart.size() - 1) + " Stops";
+            }
+
             tab2numOfStops1.setText(numOfStops1);
             tab2numOfStops2.setText(numOfStops2);
             tab2numOfStops3.setText(numOfStops3);
             tab2numOfStops4.setText(numOfStops4);
-            tab2numOfStops5.setText(numOfStop5);
+            tab2numOfStops5.setText(numOfStops5);
             tab2startStation1.setText(start);
             tab2endStation1.setText(firstPart.get(firstPart.size() - 1).split(" ", 2)[1]);   //Sets last station in this arr
             tab2startStation2.setText(secondPart.get(0).split(" ", 2)[1]);                   //Sets first station in this arr
