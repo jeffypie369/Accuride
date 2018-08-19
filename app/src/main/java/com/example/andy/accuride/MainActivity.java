@@ -3,6 +3,7 @@ package com.example.andy.accuride;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
@@ -76,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
 
         lasttrain_button.setOnClickListener(v -> {
             openLasttrain();
+        });
+
+        //To make soft keyboard disappear upon touching anything on the layout
+        findViewById(R.id.mainActivitylinearlayout).setOnTouchListener((v, event) -> {
+            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+            return true;
         });
     }
 

@@ -201,8 +201,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange and puts it in the indexArr
             for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
-                String trainStation1 = (arrFastest.get(i).split(" "))[1];
-                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrFastest.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -268,8 +268,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange
             for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
-                String trainStation1 = (arrFastest.get(i).split(" "))[1];
-                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrFastest.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -343,8 +343,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange
             for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
-                String trainStation1 = (arrFastest.get(i).split(" "))[1];
-                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrFastest.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -428,8 +428,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange
             for (int i = 0; (counterFastest > 0 && i < arrFastest.size()); i++) {
-                String trainStation1 = (arrFastest.get(i).split(" "))[1];
-                String trainStation2 = (arrFastest.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrFastest.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrFastest.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -617,8 +617,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange
             for (int i = 0; (counterLeast > 0 && i < arrLeast.size()); i++) {
-                String trainStation1 = (arrLeast.get(i).split(" "))[1];
-                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrLeast.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -683,8 +683,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange
             for (int i = 0; (counterLeast > 0 && i < arrLeast.size()); i++) {
-                String trainStation1 = (arrLeast.get(i).split(" "))[1];
-                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrLeast.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -759,8 +759,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange
             for (int i = 0; (counterLeast > 0 && i < arrLeast.size()); i++) {
-                String trainStation1 = (arrLeast.get(i).split(" "))[1];
-                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrLeast.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -844,8 +844,8 @@ public class Activity2 extends AppCompatActivity {
 
             //This while-loop finds the interchange
             for (int i = 0; (counterLeast > 0 && i < arrFastest.size()); i++) {
-                String trainStation1 = (arrLeast.get(i).split(" "))[1];
-                String trainStation2 = (arrLeast.get(i + 1).split(" "))[1];
+                String trainStation1 = (arrLeast.get(i).split(" ", 2))[1];
+                String trainStation2 = (arrLeast.get(i + 1).split(" ", 2))[1];
 
                 if (trainStation1.equals(trainStation2)) {
                     indexArr.add(i);
@@ -948,7 +948,7 @@ public class Activity2 extends AppCompatActivity {
      * @param endCircle    Circle to colour
      */
     private void setCircleColour(ArrayList<String> array, ImageView startCircle, ImageView endCircle) {
-        String line[] = array.get(0).split(" ");
+        String line[] = array.get(0).split(" ", 2);
         String trainLine = line[0];
 
         switch (trainLine) {

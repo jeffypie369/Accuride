@@ -46,19 +46,6 @@
             android:src="@drawable/right_arrow"
             android:visibility="visible" />
 
-        <!-- Dash -->
-        <!--<TextView-->
-        <!--android:id="@+id/dash"-->
-        <!--android:layout_width="25dp"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_centerHorizontal="false"-->
-        <!--android:layout_centerInParent="true"-->
-        <!--android:gravity="center"-->
-        <!--android:text="@string/dash"-->
-        <!--android:textColor="@android:color/black"-->
-        <!--android:textSize="24sp"-->
-        <!--android:visibility="invisible" />-->
-
         <!-- Start String -->
         <TextView
             android:id="@+id/start_string"
