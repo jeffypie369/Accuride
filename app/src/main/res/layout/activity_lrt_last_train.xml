@@ -12,7 +12,8 @@
         <!-- Bukit Panjang LRT Title -->
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#CECECE">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -60,6 +61,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -126,6 +128,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -192,6 +195,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -258,6 +262,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -324,6 +329,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -390,6 +396,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -456,6 +463,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -502,6 +510,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -563,7 +572,8 @@
         <!-- Filler Rows -->
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#CECECE">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -574,7 +584,8 @@
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#CECECE">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -605,6 +616,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -669,6 +681,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -735,6 +748,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -801,6 +815,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -847,6 +862,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -911,6 +927,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -977,6 +994,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1043,6 +1061,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1109,6 +1128,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1174,7 +1194,8 @@
         <!-- Filler Rows -->
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#CECECE">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1185,7 +1206,8 @@
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#CECECE">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1216,6 +1238,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1280,6 +1303,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1346,6 +1370,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1412,6 +1437,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1478,6 +1504,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1524,6 +1551,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1588,6 +1616,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1686,7 +1715,8 @@
         <!-- Filler Row -->
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#CECECE">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -1731,6 +1761,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView

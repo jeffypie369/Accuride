@@ -13,6 +13,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -44,6 +45,7 @@
         <!-- Row 1 -->
         <TableRow
             android:layout_width="match_parent"
+            android:id="@+id/bukitpanjangrow"
             android:layout_height="match_parent"
             android:weightSum="4">
 
@@ -78,6 +80,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -144,6 +147,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -210,6 +214,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -276,6 +281,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -342,6 +348,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -408,6 +415,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -474,6 +482,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -540,6 +549,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -606,6 +616,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -672,6 +683,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -738,6 +750,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -804,6 +817,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -870,6 +884,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -936,6 +951,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1002,6 +1018,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1068,6 +1085,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
@@ -1134,6 +1152,7 @@
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#CECECE"
             android:weightSum="4">
 
             <TextView
