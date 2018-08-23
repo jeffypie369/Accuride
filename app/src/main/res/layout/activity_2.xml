@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:background="#d9d9d9">
+        android:background="@color/colorDarkGrey">
 
         <!-- Title of Application -->
         <TextView
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:text="@string/name2"
-            android:textColor="@color/colorBlack"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold|italic" />
 
@@ -103,7 +103,7 @@
                 <TabWidget
                     android:id="@android:id/tabs"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"/>
 
                 <FrameLayout
                     android:id="@android:id/tabcontent"
