@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:id="@+id/mainActivitylinearlayout"
     android:clickable="true"
-    android:background="#d9d9d9"
+    android:background="@color/colorDarkGrey"
     android:baselineAligned="false"
     android:orientation="vertical"
     android:weightSum="100"
@@ -32,7 +32,7 @@
         android:layout_weight="10"
         android:gravity="center"
         android:text="@string/name2"
-        android:textColor="#000000"
+        android:textColor="#FFFFFF"
         android:textSize="25sp"
         android:textStyle="bold|italic" />
 
@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="#5F6261"
+            android:background="@drawable/rounded_corners_go"
             android:text="@string/go"
             android:textSize="19sp" />
 
@@ -95,6 +95,7 @@
             android:id="@+id/lastTraintimings"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:paddingRight="2.5dp"
             android:layout_marginBottom="0dp"
             android:scaleType="fitCenter"
             android:src="@drawable/pinkie" />
@@ -103,6 +104,7 @@
             android:id="@+id/announcement_button"
             android:layout_width="70dp"
             android:layout_height="70dp"
+            android:paddingLeft="2.5dp"
             android:contentDescription="@string/announcement_button"
             android:scaleType="fitCenter"
             android:src="@drawable/twitter_logo"
