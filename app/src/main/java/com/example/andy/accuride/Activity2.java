@@ -1,6 +1,5 @@
 package com.example.andy.accuride;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -95,26 +94,6 @@ public class Activity2 extends AppCompatActivity {
         tabSpec2.setIndicator("Least Transfers", null).setContent(R.id.tab2);
         tabHost.addTab(tabSpec1);
         tabHost.addTab(tabSpec2);
-        tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundColor(Color.parseColor("#4D4D4D"));
-
-        TextView tv = tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).findViewById(android.R.id.title);
-        TextView tv2 = tabHost.getTabWidget().getChildAt(1).findViewById(android.R.id.title);
-        tv.setTextColor(Color.parseColor("#FFFFFF"));
-        tv2.setTextColor(Color.BLACK);
-
-        tabHost.setOnTabChangedListener(tabId -> {
-            int tab = tabHost.getCurrentTab();
-            for (int i = 0; i < tabHost.getTabWidget().getChildCount(); i++) {
-                // When tab is not selected
-                tabHost.getTabWidget().getChildAt(i).setBackgroundColor(Color.parseColor("#FFFFFF"));
-                TextView tv1 = tabHost.getTabWidget().getChildAt(i).findViewById(android.R.id.title);
-                tv1.setTextColor(Color.BLACK);
-            }
-            // When tab is selected
-            tabHost.getTabWidget().getChildAt(tabHost.getCurrentTab()).setBackgroundColor(Color.parseColor("#4D4D4D"));
-            TextView tv1 = tabHost.getTabWidget().getChildAt(tab).findViewById(android.R.id.title);
-            tv1.setTextColor(Color.parseColor("#FFFFFF"));
-        });
     }
 
     /**
