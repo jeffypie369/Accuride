@@ -77,7 +77,7 @@
             android:layout_marginTop="10dp"
             android:background="@drawable/rounded_corners_go"
             android:text="@string/go"
-            android:textSize="19sp" />
+            android:textSize="16sp" />
 
     </LinearLayout>
 
@@ -95,9 +95,10 @@
             android:id="@+id/lastTraintimings"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:paddingRight="2.5dp"
             android:layout_marginBottom="0dp"
+            android:paddingRight="2.5dp"
             android:scaleType="fitCenter"
+            android:backgroundTint="@color/colorDarkGrey"
             android:src="@drawable/pinkie" />
 
         <ImageButton
@@ -105,6 +106,7 @@
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:paddingLeft="2.5dp"
+            android:backgroundTint="@color/colorDarkGrey"
             android:contentDescription="@string/announcement_button"
             android:scaleType="fitCenter"
             android:src="@drawable/twitter_logo"
