@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:screenOrientation="portrait"
     android:id="@+id/mainActivitylinearlayout"
     android:clickable="true"
     android:background="@color/colorDarkGrey"
@@ -92,26 +93,14 @@
         android:gravity="right">
 
         <ImageButton
-            android:id="@+id/map_button"
-            android:layout_width="70dp"
-            android:layout_height="70dp"
-            android:paddingStart="20dp"
-            android:paddingRight="0dp"
-            android:paddingLeft="0dp"
-            android:paddingEnd="0dp"
-            android:scaleType="fitCenter"
-            android:backgroundTint="@color/colorDarkGrey"
-            android:src="@drawable/map_logo" />
-
-        <ImageButton
             android:id="@+id/lastTraintimings"
             android:layout_width="70dp"
             android:layout_height="70dp"
             android:layout_marginBottom="0dp"
-            android:paddingStart="10dp"
+            android:paddingStart="20dp"
             android:paddingRight="0dp"
             android:paddingLeft="0dp"
-            android:paddingEnd="10dp"
+            android:paddingEnd="0dp"
             android:scaleType="fitCenter"
             android:backgroundTint="@color/colorDarkGrey"
             android:src="@drawable/pinkie" />
@@ -120,15 +109,27 @@
             android:id="@+id/announcement_button"
             android:layout_width="70dp"
             android:layout_height="70dp"
-            android:paddingStart="0dp"
+            android:paddingStart="10dp"
             android:paddingLeft="0dp"
             android:paddingRight="0dp"
-            android:paddingEnd="20dp"
+            android:paddingEnd="10dp"
             android:backgroundTint="@color/colorDarkGrey"
             android:contentDescription="@string/announcement_button"
             android:scaleType="fitCenter"
             android:src="@drawable/twitter_logo"
             tools:ignore="UnknownId" />
+
+        <ImageButton
+            android:id="@+id/map_button"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:paddingStart="0dp"
+            android:paddingRight="0dp"
+            android:paddingLeft="0dp"
+            android:paddingEnd="20dp"
+            android:scaleType="fitCenter"
+            android:backgroundTint="@color/colorDarkGrey"
+            android:src="@drawable/map_logo" />
 
     </LinearLayout>
 
