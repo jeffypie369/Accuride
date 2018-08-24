@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button go_button;
     ImageButton announcement_button;
     ImageButton lasttrain_button;
+    ImageButton map_button;
 
     /**
      * This method will render the landing page of the application when its open.
@@ -45,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         go_button = findViewById(R.id.go_button);
         announcement_button = findViewById(R.id.announcement_button);
         lasttrain_button = findViewById(R.id.lastTraintimings);
+        map_button = findViewById(R.id.map_button);
 
         //Adapters used to give suggestions when user types into the boxes
         ArrayAdapter<String> adapter = new ArrayAdapter<>(MainActivity.this,
@@ -79,6 +81,10 @@ public class MainActivity extends AppCompatActivity {
             openLasttrain();
         });
 
+        map_button.setOnClickListener(v -> {
+            openMap();
+        });
+
         //To make soft keyboard disappear upon touching anything on the layout
         findViewById(R.id.mainActivitylinearlayout).setOnTouchListener((v, event) -> {
             InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
@@ -108,6 +114,14 @@ public class MainActivity extends AppCompatActivity {
      */
     public void openLasttrain() {
         Intent intent = new Intent(this, LasttrainActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * This method is used to open MapActivity.class
+     */
+    public void openMap() {
+        Intent intent = new Intent(this, MapActivity.class);
         startActivity(intent);
     }
 
