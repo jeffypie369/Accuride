@@ -10,28 +10,41 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity"
-                  android:windowSoftInputMode="stateHidden|adjustResize">
+                  android:windowSoftInputMode="stateHidden|adjustResize"
+                  android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity2" />
+        <activity android:name=".Activity2"     android:screenOrientation="portrait"
+            />
 
         <!-- Theme is to make the window disappear when you click outside it -->
         <activity
             android:name=".GoPopUp"
-            android:theme="@style/AppTheme.CustomTheme" />
-        <activity android:name=".AnnouncementActivity" />
-        <activity android:name=".LasttrainActivity" />
-        <activity android:name=".lastEWtimingsActivity" />
-        <activity android:name=".lastNStimingsActivity" />
-        <activity android:name=".lastNEtimingsActivity" />
-        <activity android:name=".lastCCtimingsActivity" />
-        <activity android:name=".lastDTtimingsActivity" />
-        <activity android:name=".lastLRTtimingsActivity" />
-        <activity android:name=".MapActivity" />
+            android:theme="@style/AppTheme.CustomTheme"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".AnnouncementActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".LasttrainActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".lastEWtimingsActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".lastNStimingsActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".lastNEtimingsActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".lastCCtimingsActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".lastDTtimingsActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".lastLRTtimingsActivity"     android:screenOrientation="portrait"
+            />
+        <activity android:name=".MapActivity"     android:screenOrientation="portrait"
+            />
 
     </application>
 
