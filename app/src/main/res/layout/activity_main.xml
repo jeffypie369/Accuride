@@ -56,7 +56,8 @@
             android:gravity="center"
             android:hint="@string/hint1"
             android:textSize="15sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:cursorVisible="false" />
 
         <AutoCompleteTextView
             android:id="@+id/to_box"
@@ -68,7 +69,8 @@
             android:gravity="center"
             android:hint="@string/hint2"
             android:textSize="15sp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            android:cursorVisible="false" />
 
         <Button
             android:id="@+id/go_button"
