@@ -39,4 +39,6 @@ dependencies {
     // Include all the Twitter APIs
     api 'com.twitter.sdk.android:twitter:3.1.1'
 
+    // Add Library
+    implementation 'com.github.chrisbanes:PhotoView:1.2.6'
 }
