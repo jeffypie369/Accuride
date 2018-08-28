@@ -63,7 +63,6 @@ public class LasttrainActivity extends Activity {
      * the user wants to see for the last train timings.
      *
      */
-
     private void openEW() {
         Intent intent = new Intent(this, lastEWtimingsActivity.class);
         startActivity(intent);

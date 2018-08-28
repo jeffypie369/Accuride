@@ -16,7 +16,7 @@
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:gravity="center"
-        android:text="@string/start_and_or_destination_is_empty"
+        android:text="Invalid input from user!"
         android:textSize="15sp"
         android:textColor="@android:color/black"
         tools:layout_editor_absoluteX="85dp"
