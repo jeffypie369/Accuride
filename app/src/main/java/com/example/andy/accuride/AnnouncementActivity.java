@@ -27,7 +27,7 @@ public class AnnouncementActivity extends ListActivity {
         //Initialising TwitterKit and changing default configuration
         TwitterConfig config = new TwitterConfig.Builder(this)
                 .logger(new DefaultLogger(Log.DEBUG))
-                .twitterAuthConfig(new TwitterAuthConfig("insert key here", "insert secret here"))
+                .twitterAuthConfig(new TwitterAuthConfig("", ""))
                 .debug(true)
                 .build();
         Twitter.initialize(config);
